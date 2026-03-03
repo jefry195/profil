@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Jefrianus Markus - Web Developer &amp; Digital Marketer</title>
+    <meta name="description"
+        content="Portfolio of Jefrianus Markus, a Web Developer and Digital Marketer based in Kalimantan. Delivering innovative digital solutions to scale your business." />
+    <meta name="keywords"
+        content="Jefrianus Markus, Web Developer, Digital Marketing, SEO, IT Consultant, Web Design, Kalimantan, Freelancer" />
+    <meta name="author" content="Jefrianus Markus" />
+    <meta property="og:title" content="Jefrianus Markus - Digital Portfolio" />
+    <meta property="og:description"
+        content="Portfolio of Jefrianus Markus. Custom web solutions and digital marketing." />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00f2ff", "primary-dark": "#00dbe6",
+                        "secondary": "#1d4ed8",
+                        "background-dark": "#0B1120", "background-card": "#151e32", "text-main": "#e2e8f0",
+                        "text-muted": "#94a3b8",
+                        "accent": "#64ffda",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1rem", "2xl": "1.5rem", "full": "9999px" },
+                    keyframes: {
+                        pulseCustom: {
+                            '0%, 100%': { boxShadow: '0 0 0 0 rgba(37, 211, 102, 0.7)' },
+                            '70%': { boxShadow: '0 0 0 15px rgba(37, 211, 102, 0)' },
+                        },
+                        shimmer: {
+                            '0%': { transform: 'translateX(-100%)' },
+                            '100%': { transform: 'translateX(100%)' }
+                        }
+                    },
+                    animation: {
+                        pulseCustom: 'pulseCustom 2s infinite',
+                    }
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .whatsapp-green {
+                background-color: #25D366;
+            }
+            .whatsapp-green:hover {
+                background-color: #128C7E;
+            }
+            .glass-panel {
+                @apply bg-background-card/80 backdrop-blur-md border border-white/5;
+            }
+            .neon-text {
+                text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+            }
+            .neon-border {
+                box-shadow: 0 0 15px rgba(0, 242, 255, 0.15);
+            }
+            .reveal {
+                opacity: 0;
+                transform: translateY(40px);
+                transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+            }
+            .reveal.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-dark font-display text-text-main overflow-x-hidden selection:bg-primary selection:text-background-dark">
+    <header
+        class="fixed top-0 z-50 w-full border-b border-white/5 bg-background-dark/90 backdrop-blur-md transition-all">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2 group cursor-pointer">
+                <div
+                    class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-background-dark shadow-[0_0_15px_rgba(0,242,255,0.4)]">
+                    <span class="material-symbols-outlined !text-[24px] font-bold">terminal</span>
+                </div>
+                <div class="flex flex-col">
+                    <h2
+                        class="text-xl font-black tracking-tight leading-none text-white group-hover:text-primary transition-colors">
+                        JM.</h2>
+                </div>
+            </div>
+            <div class="hidden lg:flex items-center gap-10">
+                <nav class="flex items-center gap-8">
+                    <a class="text-sm font-medium text-text-muted hover:text-primary transition-colors tracking-wide"
+                        href="#about">ABOUT</a>
+                    <a class="text-sm font-medium text-text-muted hover:text-primary transition-colors tracking-wide"
+                        href="#skills">EXPERTISE</a>
+                    <a class="text-sm font-medium text-text-muted hover:text-primary transition-colors tracking-wide"
+                        href="#services">SERVICES</a>
+                    <a class="text-sm font-medium text-text-muted hover:text-primary transition-colors tracking-wide"
+                        href="#experience">RESUME</a>
+                </nav>
+                <a class="inline-flex items-center justify-center h-10 px-6 font-bold text-sm tracking-wide text-background-dark transition-all duration-200 bg-primary rounded-lg hover:bg-white hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-background-dark"
+                    href="#contact">
+                    LET'S TALK
+                </a>
+            </div>
+            <button class="lg:hidden text-white">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </header>
+    <main class="relative flex flex-col w-full">
+        <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+            <div
+                class="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-secondary/20 rounded-full blur-[120px] pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 -ml-20 -mb-20 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] pointer-events-none">
+            </div>
+            <div class="max-w-7xl w-full px-6 grid lg:grid-cols-12 gap-12 items-center relative z-10">
+                <div class="lg:col-span-7 flex flex-col gap-6 pt-10 lg:pt-0">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 w-fit">
+                        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                        <span class="text-xs font-bold tracking-widest text-primary uppercase">Available for
+                            projects</span>
+                    </div>
+                    <h1 class="text-5xl sm:text-7xl font-black tracking-tighter text-white leading-[1.1]">
+                        I'm a <br />
+                        <span id="typed-text"
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white neon-text"></span>
+                    </h1>
+                    <p class="text-xl text-text-muted max-w-2xl leading-relaxed border-l-4 border-primary/50 pl-6">
+                        I'm <strong class="text-white">Jefrianus Markus</strong>. I specialize in Web Development and
+                        Digital Marketing, creating innovative and responsive digital solutions to enhance brand
+                        awareness and conversions.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a class="inline-flex items-center justify-center h-14 px-8 font-bold text-base text-background-dark transition-all duration-200 bg-primary rounded-lg hover:bg-white hover:scale-105 shadow-[0_0_20px_rgba(0,242,255,0.3)]"
+                            href="#contact">
+                            Start a Project
+                            <span class="material-symbols-outlined ml-2 text-lg">arrow_forward</span>
+                        </a>
+                        <a class="inline-flex items-center justify-center h-14 px-8 font-bold text-base text-white transition-all duration-200 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 backdrop-blur-sm"
+                            href="#services">
+                            Explore Services
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-8 mt-8 pt-8 border-t border-white/10">
+                        <div>
+                            <p class="text-3xl font-bold text-white">5+</p>
+                            <p class="text-sm text-text-muted uppercase tracking-wider">Years Exp.</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-white">30+</p>
+                            <p class="text-sm text-text-muted uppercase tracking-wider">Clients</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-white">100%</p>
+                            <p class="text-sm text-text-muted uppercase tracking-wider">Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 relative">
+                    <div
+                        class="relative z-10 rounded-2xl overflow-hidden border border-white/10 shadow-2xl neon-border rotate-3 hover:rotate-0 transition-transform duration-500 bg-[#0B1120]">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent z-20">
+                        </div>
+                        <img alt="Jefrianus Markus - Professional Portrait"
+                            class="w-full aspect-[4/5] object-cover object-[center_10%] scale-[1.3] origin-top hover:scale-[1.35] transition-all duration-500"
+                            src="jef.png" />
+                    </div>
+                    <div
+                        class="absolute inset-0 -z-10 translate-x-4 translate-y-4 border border-primary/20 rounded-2xl">
+                    </div>
+                    <div
+                        class="absolute -bottom-10 -right-10 z-20 bg-background-card p-6 rounded-xl border border-white/10 shadow-xl backdrop-blur-md hidden md:block">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-green-500/20 p-3 rounded-full text-green-400">
+                                <span class="material-symbols-outlined">verified</span>
+                            </div>
+                            <div>
+                                <p class="text-xs text-text-muted uppercase">Certified</p>
+                                <p class="font-bold text-white">Google IT Support</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 px-6 bg-background-dark relative" id="about">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-12 gap-12">
+                    <div class="lg:col-span-4">
+                        <div class="sticky top-32">
+                            <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">About Me</h2>
+                            <h3 class="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+                                Delivering <span class="text-primary">Innovative</span> Digital Solutions.
+                            </h3>
+                            <p class="text-text-muted text-lg leading-relaxed mb-8">
+                                I am an IT professional born on November 23, 1995. With a strong educational foundation
+                                from <strong class="text-white">STIENAS Colorado Samarinda</strong>, I specialize in
+                                <strong class="text-white">Web Development and Digital Marketing</strong>. I leverage
+                                modern programming tools to create innovative, responsive web applications and optimize
+                                digital online presence.
+                            </p>
+                            <a class="text-white hover:text-primary font-bold inline-flex items-center gap-2 group"
+                                href="#experience">
+                                View Experience
+                                <span
+                                    class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-8 grid md:grid-cols-2 gap-6">
+                        <div
+                            class="glass-panel p-8 rounded-2xl md:translate-y-12 hover:border-primary/50 transition-colors group">
+                            <span
+                                class="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform">verified_user</span>
+                            <h4 class="text-xl font-bold text-white mb-3">Google Certified</h4>
+                            <p class="text-text-muted">Holder of the Google IT Support Specialist Certification. I bring
+                                rigorous, standardized problem-solving to every project.</p>
+                        </div>
+                        <div class="glass-panel p-8 rounded-2xl hover:border-primary/50 transition-colors group">
+                            <span
+                                class="material-symbols-outlined text-4xl text-secondary mb-6 group-hover:scale-110 transition-transform">code</span>
+                            <h4 class="text-xl font-bold text-white mb-3">Modern Web Dev</h4>
+                            <p class="text-text-muted">Crafting blazing fast, responsive websites using the latest
+                                technologies like Tailwind CSS and modern frameworks.</p>
+                        </div>
+                        <div
+                            class="glass-panel p-8 rounded-2xl md:translate-y-12 hover:border-primary/50 transition-colors group">
+                            <span
+                                class="material-symbols-outlined text-4xl text-accent mb-6 group-hover:scale-110 transition-transform">trending_up</span>
+                            <h4 class="text-xl font-bold text-white mb-3">Growth Strategy</h4>
+                            <p class="text-text-muted">Digital consulting that goes beyond code. I help define your
+                                digital identity and growth path.</p>
+                        </div>
+                        <div
+                            class="glass-panel p-8 rounded-2xl bg-gradient-to-br from-primary/10 to-transparent border-primary/20 hover:border-primary/50 transition-colors group">
+                            <span
+                                class="material-symbols-outlined text-4xl text-white mb-6 group-hover:scale-110 transition-transform">handshake</span>
+                            <h4 class="text-xl font-bold text-white mb-3">UMKM Partner</h4>
+                            <p class="text-text-muted">Dedicated to digitizing local businesses with affordable,
+                                high-impact solutions tailored for the Indonesian market.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 px-6 bg-[#0f1729]" id="skills">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <h2 class="text-4xl font-bold text-white mb-4">Technical Arsenal</h2>
+                    <div class="h-1 w-20 bg-primary rounded-full"></div>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-16">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-8 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">terminal</span> Development &amp; IT
+                        </h3>
+                        <div class="space-y-6">
+                            <div class="group">
+                                <div class="flex justify-between mb-2">
+                                    <span
+                                        class="text-text-main font-medium group-hover:text-primary transition-colors">Web
+                                        Development (HTML/CSS/Tailwind)</span>
+                                    <span class="text-primary font-bold">90%</span>
+                                </div>
+                                <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
+                                    <div
+                                        class="bg-primary h-full rounded-full w-[90%] shadow-[0_0_10px_rgba(0,242,255,0.5)]">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="flex justify-between mb-2">
+                                    <span
+                                        class="text-text-main font-medium group-hover:text-primary transition-colors">App
+                                        Development</span>
+                                    <span class="text-primary font-bold">80%</span>
+                                </div>
+                                <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
+                                    <div
+                                        class="bg-primary h-full rounded-full w-[80%] shadow-[0_0_10px_rgba(0,242,255,0.5)]">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="flex justify-between mb-2">
+                                    <span
+                                        class="text-text-main font-medium group-hover:text-primary transition-colors">WordPress
+                                        &amp; CMS</span>
+                                    <span class="text-primary font-bold">95%</span>
+                                </div>
+                                <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
+                                    <div
+                                        class="bg-primary h-full rounded-full w-[95%] shadow-[0_0_10px_rgba(0,242,255,0.5)]">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="flex justify-between mb-2">
+                                    <span
+                                        class="text-text-main font-medium group-hover:text-primary transition-colors">Server
+                                        Management (cPanel/DNS)</span>
+                                    <span class="text-primary font-bold">85%</span>
+                                </div>
+                                <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
+                                    <div
+                                        class="bg-primary h-full rounded-full w-[85%] shadow-[0_0_10px_rgba(0,242,255,0.5)]">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="flex justify-between mb-2">
+                                    <span
+                                        class="text-text-main font-medium group-hover:text-primary transition-colors">IT
+                                        Support &amp; Hardware</span>
+                                    <span class="text-primary font-bold">92%</span>
+                                </div>
+                                <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
+                                    <div
+                                        class="bg-primary h-full rounded-full w-[92%] shadow-[0_0_10px_rgba(0,242,255,0.5)]">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-8 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary">business_center</span> Business &amp;
+                            Marketing
+                        </h3>
+                        <div class="space-y-6">
+                            <div class="group">
+                                <div class="flex justify-between mb-2">
+                                    <span
+                                        class="text-text-main font-medium group-hover:text-secondary transition-colors">Digital
+                                        Branding</span>
+                                    <span class="text-secondary font-bold">88%</span>
+                                </div>
+                                <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
+                                    <div class="bg-secondary h-full rounded-full w-[88%]"></div>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="flex justify-between mb-2">
+                                    <span
+                                        class="text-text-main font-medium group-hover:text-secondary transition-colors">Digital
+                                        Marketing</span>
+                                    <span class="text-secondary font-bold">90%</span>
+                                </div>
+                                <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
+                                    <div class="bg-secondary h-full rounded-full w-[90%]"></div>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="flex justify-between mb-2">
+                                    <span
+                                        class="text-text-main font-medium group-hover:text-secondary transition-colors">SEO
+                                        Specialist</span>
+                                    <span class="text-secondary font-bold">85%</span>
+                                </div>
+                                <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
+                                    <div class="bg-secondary h-full rounded-full w-[85%]"></div>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="flex justify-between mb-2">
+                                    <span
+                                        class="text-text-main font-medium group-hover:text-secondary transition-colors">UMKM
+                                        Consultation</span>
+                                    <span class="text-secondary font-bold">95%</span>
+                                </div>
+                                <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
+                                    <div class="bg-secondary h-full rounded-full w-[95%]"></div>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="flex justify-between mb-2">
+                                    <span
+                                        class="text-text-main font-medium group-hover:text-secondary transition-colors">Project
+                                        Management</span>
+                                    <span class="text-secondary font-bold">85%</span>
+                                </div>
+                                <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
+                                    <div class="bg-secondary h-full rounded-full w-[85%]"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 px-6 bg-background-dark" id="services">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="text-primary font-bold tracking-[0.2em] uppercase text-xs">Solutions</span>
+                    <h2 class="text-4xl md:text-5xl font-black mt-2 text-white">How I Can Help</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 auto-rows-[minmax(0,_1fr)]">
+                    <div
+                        class="md:col-span-2 glass-panel p-10 rounded-3xl relative overflow-hidden group hover:bg-white/5 transition-all duration-300">
+                        <div class="absolute top-0 right-0 p-10 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <span class="material-symbols-outlined text-[150px] text-primary">web</span>
+                        </div>
+                        <div class="relative z-10 flex flex-col justify-between h-full">
+                            <div>
+                                <div
+                                    class="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center text-primary mb-6">
+                                    <span class="material-symbols-outlined text-3xl">web</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-4">Company Profile Website</h3>
+                                <p class="text-text-muted text-lg max-w-md">Premium, ultra-responsive websites that
+                                    serve as the digital face of your brand. I build trust through pixel-perfect design.
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <a class="inline-flex items-center text-primary font-bold hover:gap-2 transition-all"
+                                    href="https://wa.me/6282354506569">
+                                    Start Project <span class="material-symbols-outlined ml-1">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="glass-panel p-10 rounded-3xl relative overflow-hidden group hover:bg-white/5 transition-all duration-300">
+                        <div class="relative z-10 flex flex-col justify-between h-full">
+                            <div>
+                                <div
+                                    class="w-14 h-14 rounded-xl bg-secondary/20 flex items-center justify-center text-secondary mb-6">
+                                    <span class="material-symbols-outlined text-3xl">brush</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-4">Graphic Design</h3>
+                                <p class="text-text-muted">Impactful visuals for your brand identity, marketing
+                                    materials, and social media assets that capture attention.</p>
+                            </div>
+                            <div class="mt-8">
+                                <a class="inline-flex items-center text-secondary font-bold hover:gap-2 transition-all"
+                                    href="https://wa.me/6282354506569">
+                                    Get Designs <span class="material-symbols-outlined ml-1">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="glass-panel p-10 rounded-3xl relative overflow-hidden group hover:bg-white/5 transition-all duration-300">
+                        <div class="relative z-10 flex flex-col justify-between h-full">
+                            <div>
+                                <div
+                                    class="w-14 h-14 rounded-xl bg-accent/20 flex items-center justify-center text-accent mb-6">
+                                    <span class="material-symbols-outlined text-3xl">video_library</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-4">Digital Content Creation</h3>
+                                <p class="text-text-muted">Expert video editing and YouTube content strategy to grow
+                                    your audience and engagement online.</p>
+                            </div>
+                            <div class="mt-8">
+                                <a class="inline-flex items-center text-accent font-bold hover:gap-2 transition-all"
+                                    href="https://wa.me/6282354506569">
+                                    Create Content <span class="material-symbols-outlined ml-1">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="glass-panel p-10 rounded-3xl relative overflow-hidden group hover:bg-white/5 transition-all duration-300">
+                        <div class="relative z-10 flex flex-col justify-between h-full">
+                            <div>
+                                <div
+                                    class="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center text-primary mb-6">
+                                    <span class="material-symbols-outlined text-3xl">campaign</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-4">Landing Pages</h3>
+                                <p class="text-text-muted">High-converting pages designed specifically for sales and
+                                    marketing campaigns.</p>
+                            </div>
+                            <div class="mt-8">
+                                <a class="inline-flex items-center text-primary font-bold hover:gap-2 transition-all"
+                                    href="https://wa.me/6282354506569">
+                                    Let's Growth <span class="material-symbols-outlined ml-1">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="glass-panel p-10 rounded-3xl relative overflow-hidden group hover:bg-white/5 transition-all duration-300">
+                        <div class="relative z-10 flex flex-col justify-between h-full">
+                            <div>
+                                <div
+                                    class="w-14 h-14 rounded-xl bg-secondary/20 flex items-center justify-center text-secondary mb-6">
+                                    <span class="material-symbols-outlined text-3xl">dns</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-4">IT Infrastructure</h3>
+                                <p class="text-text-muted">Hosting setup, SSL configuration, and domain management.
+                                    Technical foundations made simple.</p>
+                            </div>
+                            <div class="mt-8">
+                                <a class="inline-flex items-center text-secondary font-bold hover:gap-2 transition-all"
+                                    href="https://wa.me/6282354506569">
+                                    Get Support <span class="material-symbols-outlined ml-1">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="md:col-span-3 glass-panel p-10 rounded-3xl relative overflow-hidden group hover:bg-white/5 transition-all duration-300 bg-gradient-to-r from-background-card to-background-dark border-none">
+                        <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+                        <div class="relative z-10 flex flex-col md:flex-row items-center justify-between h-full gap-8">
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-white mb-4">Need Custom Solutions?</h3>
+                                <p class="text-text-muted text-lg">Whether it's complex troubleshooting, hardware
+                                    procurement advice, or full-scale digital transformation.</p>
+                            </div>
+                            <div>
+                                <a class="inline-flex items-center justify-center h-14 px-8 font-bold text-base text-background-dark transition-all duration-200 bg-white rounded-lg hover:bg-primary hover:text-background-dark hover:scale-105 shadow-lg whitespace-nowrap"
+                                    href="https://wa.me/6282354506569">
+                                    Chat on WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 px-6 bg-[#0B1120] relative border-t border-white/5">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-5">
+                        <h2 class="text-3xl font-bold text-white mb-4">Digital Presence</h2>
+                        <p class="text-text-muted text-lg">Connect with me on professional networks or subscribe to my
+                            channel for tech insights.</p>
+                    </div>
+                    <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6">
+                        <a class="flex items-center gap-4 p-6 rounded-2xl bg-gradient-to-br from-[#0a66c2]/20 to-transparent border border-[#0a66c2]/30 hover:bg-[#0a66c2]/30 transition-all group"
+                            href="https://www.linkedin.com/in/jefrianus-markus" target="_blank"
+                            rel="noopener noreferrer">
+                            <div
+                                class="w-12 h-12 rounded-full bg-[#0a66c2] flex items-center justify-center text-white shrink-0">
+                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-[#0a66c2] transition-colors">
+                                    LinkedIn Profile</h3>
+                                <p class="text-sm text-text-muted">190+ Connections</p>
+                            </div>
+                        </a>
+                        <a class="flex items-center gap-4 p-6 rounded-2xl bg-gradient-to-br from-[#E1306C]/20 to-transparent border border-[#E1306C]/30 hover:bg-[#E1306C]/30 transition-all group"
+                            href="https://www.instagram.com/jefry195" target="_blank" rel="noopener noreferrer">
+                            <div
+                                class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#FFDC80] via-[#FD1D1D] to-[#833AB4] flex items-center justify-center text-white shrink-0">
+                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.88z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-[#E1306C] transition-colors">
+                                    Instagram Profile</h3>
+                                <p class="text-sm text-text-muted">@jefry195</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 px-6 bg-[#0f1729]" id="experience">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center gap-4 mb-12">
+                    <h2 class="text-3xl font-bold text-white">Work Experience</h2>
+                    <div class="flex-1 h-px bg-white/10"></div>
+                </div>
+                <div class="space-y-8">
+                    <div class="relative pl-8 md:pl-0">
+                        <div class="hidden md:block absolute left-[165px] top-0 bottom-0 w-px bg-white/10"></div>
+                        <div class="flex flex-col md:flex-row gap-4 md:gap-16">
+                            <div class="md:w-32 md:text-right pt-1 shrink-0">
+                                <span class="text-primary font-bold">2023 - 2024</span>
+                            </div>
+                            <div
+                                class="relative flex-1 bg-background-card p-6 rounded-xl border border-white/5 hover:border-primary/30 transition-colors">
+                                <div
+                                    class="hidden md:block absolute top-6 -left-[37px] w-3 h-3 rounded-full bg-primary shadow-[0_0_10px_rgba(0,242,255,0.8)] z-10">
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-1">Driver Dump Truck</h3>
+                                <p class="text-sm text-text-muted mb-4">PT. Indonesia Weda Bay Industrial Park</p>
+                                <p class="text-text-main leading-relaxed">Transporting operators to work sites and
+                                    bringing field supervisors for site patrol.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8 md:pl-0">
+                        <div class="hidden md:block absolute left-[165px] top-0 bottom-0 w-px bg-white/10"></div>
+                        <div class="flex flex-col md:flex-row gap-4 md:gap-16">
+                            <div class="md:w-32 md:text-right pt-1 shrink-0">
+                                <span class="text-text-muted font-bold">2022 - 2023</span>
+                            </div>
+                            <div
+                                class="relative flex-1 bg-background-card p-6 rounded-xl border border-white/5 hover:border-white/20 transition-colors">
+                                <div
+                                    class="hidden md:block absolute top-6 -left-[37px] w-3 h-3 rounded-full bg-white/20 border border-white/40 z-10">
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-1">Digital Marketing</h3>
+                                <p class="text-sm text-text-muted mb-4">PT. Sriwijaya Teknik Utama</p>
+                                <ul class="text-text-main leading-relaxed list-disc list-inside space-y-2">
+                                    <li>Developed and implemented digital marketing strategies to increase brand
+                                        awareness and generate new leads.</li>
+                                    <li>Optimized company website to improve organic search rankings and boost
+                                        conversions.</li>
+                                    <li>Analyzed campaign performance data and provided strategic recommendations.</li>
+                                    <li>Managed and maintained the company's social media presence.</li>
+                                    <li>Created promotional content including blog articles, infographics, and
+                                        promotional videos.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8 md:pl-0">
+                        <div class="hidden md:block absolute left-[165px] top-0 bottom-0 w-px bg-white/10"></div>
+                        <div class="flex flex-col md:flex-row gap-4 md:gap-16">
+                            <div class="md:w-32 md:text-right pt-1 shrink-0">
+                                <span class="text-text-muted font-bold">2019 - Present</span>
+                            </div>
+                            <div
+                                class="relative flex-1 bg-background-card p-6 rounded-xl border border-white/5 hover:border-white/20 transition-colors">
+                                <div
+                                    class="hidden md:block absolute top-6 -left-[37px] w-3 h-3 rounded-full bg-white/20 border border-white/40 z-10">
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-1">Marketing</h3>
+                                <p class="text-sm text-text-muted mb-4">Dooren'z Creative</p>
+                                <p class="text-text-main leading-relaxed">Marketed products for a creative store
+                                    specializing in packaging printing, screen printing, and souvenirs to enhance client
+                                    branding.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8 md:pl-0">
+                        <div class="hidden md:block absolute left-[165px] top-0 bottom-0 w-px bg-white/10"></div>
+                        <div class="flex flex-col md:flex-row gap-4 md:gap-16">
+                            <div class="md:w-32 md:text-right pt-1 shrink-0">
+                                <span class="text-text-muted font-bold">2017 - 2019</span>
+                            </div>
+                            <div
+                                class="relative flex-1 bg-background-card p-6 rounded-xl border border-white/5 hover:border-white/20 transition-colors">
+                                <div
+                                    class="hidden md:block absolute top-6 -left-[37px] w-3 h-3 rounded-full bg-white/20 border border-white/40 z-10">
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-1">Graphic Designer</h3>
+                                <p class="text-sm text-text-muted mb-4">PT. Subur Makmur Bangunan</p>
+                                <ul class="text-text-main leading-relaxed list-disc list-inside space-y-2">
+                                    <li>Created monthly designs for flyers, banners, and events.</li>
+                                    <li>Designed promotional materials for specific events.</li>
+                                    <li>Created decorative designs for holiday celebrations.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 mb-12 mt-16">
+                        <h2 class="text-3xl font-bold text-white">Education</h2>
+                        <div class="flex-1 h-px bg-white/10"></div>
+                    </div>
+                    <div class="space-y-4">
+                        <div
+                            class="bg-background-card p-6 rounded-xl border border-white/5 flex justify-between items-center hover:border-white/20 transition-colors">
+                            <h3 class="text-lg font-bold text-white">STIENAS Colorado Samarinda</h3>
+                            <span class="text-primary font-bold">2014 - 2018</span>
+                        </div>
+                        <div
+                            class="bg-background-card p-6 rounded-xl border border-white/5 flex justify-between items-center hover:border-white/20 transition-colors">
+                            <h3 class="text-lg font-bold text-white">SMKN 6 Samarinda</h3>
+                            <span class="text-text-muted font-bold">2010 - 2013</span>
+                        </div>
+                        <div
+                            class="bg-background-card p-6 rounded-xl border border-white/5 flex justify-between items-center hover:border-white/20 transition-colors">
+                            <h3 class="text-lg font-bold text-white">SMPN 7 Samarinda</h3>
+                            <span class="text-text-muted font-bold">2007 - 2010</span>
+                        </div>
+                        <div
+                            class="bg-background-card p-6 rounded-xl border border-white/5 flex justify-between items-center hover:border-white/20 transition-colors">
+                            <h3 class="text-lg font-bold text-white">SDN 023 Samarinda</h3>
+                            <span class="text-text-muted font-bold">2001 - 2007</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="py-32 px-6 bg-background-dark relative overflow-hidden" id="contact">
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div class="w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px]"></div>
+            </div>
+            <div class="max-w-5xl mx-auto relative z-10 text-center">
+                <h2 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter">
+                    Ready to <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Level
+                        Up?</span>
+                </h2>
+                <p class="text-xl text-text-muted max-w-2xl mx-auto mb-12">
+                    Stop struggling with tech and start growing your business. I'm just one message away from solving
+                    your digital challenges.
+                </p>
+                <div class="flex flex-col items-center gap-6">
+                    <a class="group relative inline-flex items-center justify-center gap-3 h-20 px-12 text-xl font-bold text-background-dark bg-primary rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(0,242,255,0.4)]"
+                        href="https://wa.me/6282354506569">
+                        <span
+                            class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></span>
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z">
+                            </path>
+                        </svg>
+                        Chat on WhatsApp
+                    </a>
+                    <p class="text-sm text-text-muted mt-4">Prefer email? <a
+                            class="text-white hover:text-primary underline decoration-primary decoration-2 underline-offset-4"
+                            href="mailto:jefry.m95@gmail.com">jefry.m95@gmail.com</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-black py-10 px-6 border-t border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-col items-center gap-8">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary">terminal</span>
+                <span class="font-bold text-xl text-white">Jefrianus Markus</span>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8 text-text-muted text-sm font-medium">
+                <a class="hover:text-primary transition-colors" href="#about">About</a>
+                <a class="hover:text-primary transition-colors" href="#services">Services</a>
+                <a class="hover:text-primary transition-colors" href="#experience">Resume</a>
+            </div>
+            <div class="text-center text-slate-600 text-xs mt-4">
+                <p>© 2026 Jefrianus Markus. All rights reserved.</p>
+                <p class="mt-2">Engineered with <span class="text-primary">♥</span> in Kalimantan.</p>
+            </div>
+        </div>
+    </footer>
+    <a aria-label="Chat on WhatsApp"
+        class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full whatsapp-green text-white shadow-lg transition-transform hover:-translate-y-1 hover:shadow-xl animate-pulseCustom"
+        href="https://wa.me/6282354506569" target="_blank">
+        <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z">
+            </path>
+        </svg>
+    </a>
+
+    <script>
+        // Init Typed.js
+        var typed = new Typed('#typed-text', {
+            strings: ['Web Developer.', 'Digital Marketer.', 'Graphic Designer.', 'SEO Specialist.'],
+            typeSpeed: 60,
+            backSpeed: 30,
+            backDelay: 2000,
+            loop: true,
+            showCursor: true,
+            cursorChar: '|'
+        });
+
+        // Init Intersection Observer for Scroll Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+
+            // Apply reveal class to the direct top-level wrapper divs inside sections
+            sections.forEach(section => {
+                const innerWrappers = section.querySelectorAll('section > div');
+                innerWrappers.forEach(child => child.classList.add('reveal'));
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>
