@@ -115,9 +115,28 @@
                     LET'S TALK
                 </a>
             </div>
-            <button class="lg:hidden text-white">
-                <span class="material-symbols-outlined">menu</span>
+            <button id="mobile-menu-btn"
+                class="lg:hidden text-white hover:text-primary transition-colors focus:outline-none">
+                <span id="menu-icon" class="material-symbols-outlined">menu</span>
             </button>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-[#0B1120]/95 backdrop-blur-md border-b border-white/5 absolute w-full top-full left-0 py-6 px-6 shadow-xl">
+            <nav class="flex flex-col gap-6">
+                <a class="mobile-link text-base font-medium text-text-main hover:text-primary transition-colors tracking-wide block"
+                    href="#about">ABOUT</a>
+                <a class="mobile-link text-base font-medium text-text-main hover:text-primary transition-colors tracking-wide block"
+                    href="#skills">EXPERTISE</a>
+                <a class="mobile-link text-base font-medium text-text-main hover:text-primary transition-colors tracking-wide block"
+                    href="#services">SERVICES</a>
+                <a class="mobile-link text-base font-medium text-text-main hover:text-primary transition-colors tracking-wide block"
+                    href="#experience">RESUME</a>
+                <a class="mobile-link inline-flex mt-2 items-center justify-center h-12 px-6 font-bold text-sm tracking-wide text-background-dark transition-all duration-200 bg-primary rounded-lg hover:bg-white w-full shadow-[0_0_15px_rgba(0,242,255,0.3)]"
+                    href="#contact">
+                    LET'S TALK
+                </a>
+            </nav>
         </div>
     </header>
     <main class="relative flex flex-col w-full">
@@ -802,6 +821,31 @@
 
             document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
         });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        if (mobileMenuBtn && mobileMenu && menuIcon) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuIcon.textContent = 'menu';
+                } else {
+                    menuIcon.textContent = 'close';
+                }
+            });
+
+            // Close menu when clicking a link
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.textContent = 'menu';
+                });
+            });
+        }
     </script>
 </body>
 
