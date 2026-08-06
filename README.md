@@ -1,100 +1,115 @@
-# 🚀 BorneoCodeLab  &mdash;  Jasa Pembuatan Website & Digital Solutions
+# 🚀 Jefrianus Markus — IT Specialist & Digital Marketing Consultant
 
 <div align="center">
 
-  <img src="assets/logo_borneocodelab.png" alt="BorneoCodeLab Logo" width="180" style="border-radius: 12px; margin-bottom: 15px;" />
+  ### Full-Stack Web Developer • ERP Systems Architect • Digital Marketing Specialist
+  **Founder of BorneoCodeLab • Based in Samarinda, Kalimantan Timur, Indonesia**
 
-  ### Solusi Digital Terpercaya untuk Bisnis & UMKM Go Digital
-  **Website Modern • Cepat • Responsive • Optimized for SEO, AEO, & GEO**
-
-  [![Website Portal](https://img.shields.io/badge/Website-borneocodelabs.xo.je-0d6efd?style=for-the-badge&logo=google-chrome&logoColor=white)](https://borneocodelabs.xo.je/)
-  [![WhatsApp Consultation](https://img.shields.io/badge/WhatsApp-082354506569-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/6282354506569)
-  [![Location](https://img.shields.io/badge/Location-Samarinda%2C%20Kaltim-ff4757?style=for-the-badge&logo=google-maps&logoColor=white)](#-kontak--lokasi)
-  [![License](https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge)](#)
+  [![Portfolio Website](https://img.shields.io/badge/Portfolio-jefri--orcin.vercel.app-00f2ff?style=for-the-badge&logo=vercel&logoColor=black)](https://jefri-orcin.vercel.app/)
+  [![BorneoCodeLab Hub](https://img.shields.io/badge/Agency-borneocodelabs.xo.je-0d6efd?style=for-the-badge&logo=google-chrome&logoColor=white)](https://borneocodelabs.xo.je/)
+  [![ERP Cloud Demo](https://img.shields.io/badge/ERP%20Demo-demo.lovira.biz.id-1d4ed8?style=for-the-badge&logo=laravel&logoColor=white)](https://demo.lovira.biz.id/)
+  [![WhatsApp](https://img.shields.io/badge/WhatsApp-082354506569-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/6282354506569)
 
 </div>
 
 ---
 
-## 📌 Tentang BorneoCodeLab
+## 👋 About Me
 
-**BorneoCodeLab** adalah penyedia layanan pembuatan website profesional dan solusi digital yang berbasis di **Samarinda, Kalimantan Timur**. Didirikan dan dikembangkan oleh **Jefrianus Markus**, BorneoCodeLab berfokus membantu bisnis lokal, UMKM, institusi pendidikan, dan perusahaan berkembang meningkatkan kredibilitas dan penjualan melalui platform digital modern.
+Hi there! I am **Jefrianus Markus**, an IT Specialist, Web Developer, and Digital Marketing Consultant based in Samarinda, Kalimantan Timur, Indonesia. I specialize in building high-converting websites, custom web applications (React, Next.js, Laravel), enterprise Cloud ERP systems, AI workflow automations (n8n & WhatsApp API), and driving measurable business growth through Technical SEO, AEO, and GEO.
 
-Website ini dibangun menggunakan arsitektur modern yang ringan, ultra-cepat, serta dioptimasi penuh menggunakan standar terbaru:
-- 🔍 **SEO (Search Engine Optimization)**: Peringkat tinggi di mesin pencari Google & Bing.
-- 🎙️ **AEO (Answer Engine Optimization)**: Jawaban langsung ramah pencarian suara (Siri, Alexa, Google Assistant) & *Featured Snippets*.
-- 🤖 **GEO (Generative Engine Optimization)**: Terstruktur rapi dengan Schema.org JSON-LD agar mudah dipahami & direkomendasikan oleh AI Engine seperti **ChatGPT**, **Perplexity**, **Claude**, dan **Gemini**.
+Through **BorneoCodeLab**, I help local businesses, SMEs, institutions, and growing brands scale their digital presence with fast, modern, and SEO-optimized solutions.
 
 ---
 
-## ⚡ Layanan Utama
+## 🌐 Quick Links & Live Demos
 
-| Layanan | Deskripsi |
-| :--- | :--- |
-| **🏢 Company Profile** | Website representatif untuk membangun citra profesional dan kredibilitas di mata klien & partner. |
-| **🎓 Web Sekolah / E-Learning** | Platform akademik, pendaftaran online (PPDB), serta portal materi pembelajaran terpadu. |
-| **🛒 Web UMKM / Toko Online** | Katalog produk interaktif, fitur keranjang belanja, integrasi ongkir otomatis, & payment gateway. |
-| **📊 Sistem Informasi / ERP** | Sistem manajemen data terintegrasi (Stok Inventaris, Kasir, Keuangan, & Absensi). |
-| **🚀 Landing Page** | Halaman promosi khusus dengan konversi tinggi untuk campaign iklan produk/jasa. |
-| **⚙️ Custom Development** | Fitur & sistem dinamis kustom sesuai kebutuhan spesifik alur bisnis Anda. |
-
----
-
-## 💼 Featured Portfolios
-
-Berikut adalah proyek pilihan yang telah dikembangkan oleh BorneoCodeLab:
-
-| Project | Kategori | Deskripsi | Tech Stack | Link Project |
-| :--- | :--- | :--- | :--- | :--- |
-| **PT. Sriwijaya Teknik Utama** | Company Profile | Perusahaan fabrikasi, perbaikan, & engineering terkemuka di Samarinda, Kaltim. | `WordPress` `WooCommerce` | [🌐 Visit Site](https://www.pt-stu.co.id/) |
-| **Dooren'z Percetakan** | Toko Online | Portal percetakan & industri kreatif berpengalaman lebih dari 10 tahun. | `WordPress` `WooCommerce` | [🛒 Visit Store](https://doorenzcreative.com/) |
-| **Digital Resume** | Landing Page | Website portfolio personal dan showcase keahlian web development & digital marketing. | `React` `Tailwind CSS` | [🚀 Visit Resume](https://jefri-orcin.vercel.app/) |
-| **Cloud ERP System** | Sistem Informasi | System ERP terintegrasi untuk pengelolaan stok, keuangan, & SDM secara terpusat. | `PHP` `MySQL` `CSS` | [📊 Try Demo](https://demo.lovira.biz.id/) |
-| **JeffSender** | Custom System | Platform otomasi pengiriman pesan massal & bot WhatsApp API. | `WhatsApp Automation` | [💬 Visit App](https://wa.doorenzcreative.com/) |
-| **Digital Invitation** | Custom Web | Platform jasa pemesanan dan pembuatan undangan pernikahan digital. | `WordPress` `Custom Web` | [💌 Visit Site](https://lovira.biz.id/) |
+| Platform / Project | Description | Live Link |
+| :--- | :--- | :--- |
+| **Digital Portfolio** | Official personal portfolio & SEO/GEO showcase | [🌐 Visit Website](https://jefri-orcin.vercel.app/) |
+| **BorneoCodeLab Hub** | Web Development & Digital Service Agency Portal | [🚀 Visit Portal](https://borneocodelabs.xo.je/) |
+| **Enterprise ERP System** | Cloud ERP (Inventory, Finance, Sales, Logistics) | [📊 Try ERP Demo](https://demo.lovira.biz.id/) |
+| **Doorenz Creative** | WooCommerce E-Commerce & Brand Printing Portal | [🛒 Visit Store](https://doorenzcreative.com/) |
+| **PT. Sriwijaya Teknik Utama** | Industrial Engineering & Fabrication Company Profile | [🏢 Visit Website](https://www.pt-stu.co.id/) |
+| **JeffSender App** | WhatsApp Bulk Messaging & Automation Tool | [💬 Visit App](https://wa.doorenzcreative.com/) |
 
 ---
 
-## ⚙️ Fitur & Keunggulan Layanan
+## 🛠️ Technical Arsenal & Core Skills
 
-- 📱 **Mobile Responsive**: Tampilan sempurna di perangkat smartphone, tablet, maupun desktop.
-- 🔐 **Secure & Fast**: Kode bersih, proteksi SSL, dan loading halaman cepat.
-- 🎛️ **Halaman Admin User-Friendly**: Dashboard pengelolaan data intuitif yang mudah dioperasikan mandiri.
-- 📊 **Integrasi Analytics & WhatsApp**: Tombol chat langsung WhatsApp & pelacakan statistik pengunjung.
-- 🛠️ **Maintenance Support**: Garansi pemeliharaan dan panduan pengelolaan pasca-launch.
+### 💻 Frontend & Modern Web
+`React.js` • `Next.js` • `JavaScript (ES6+)` • `TypeScript` • `Tailwind CSS` • `HTML5 / CSS3` • `Typed.js`
+
+### ⚙️ Backend & Systems Architecture
+`Laravel (PHP)` • `Node.js` • `RESTful APIs` • `ERP Architecture` • `MySQL` • `WordPress / WooCommerce`
+
+### 🤖 AI & Workflow Automation
+`n8n Automation` • `AI Chatbots & Agents` • `WhatsApp API` • `Custom Webhooks`
+
+### 📈 Search Optimization (SEO, AEO, GEO)
+`Technical & On-Page SEO` • `AEO (Answer Engine & Voice Search)` • `GEO (AI Engine Optimization for ChatGPT, Perplexity & Gemini)` • `Schema.org JSON-LD`
+
+### ☁️ Infrastructure & IT Support
+`Google Certified IT Support` • `Vercel` • `VPS Deployment` • `Linux Admin` • `DNS & SSL Hardening`
 
 ---
 
-## 🤖 Optimasi SEO, AEO, & GEO Architecture
+## 💼 Featured Case Studies & Work
 
-Repository ini menerapkan arsitektur SEO/GEO generasi terbaru:
+### 1. Enterprise ERP & Operations System — [demo.lovira.biz.id](https://demo.lovira.biz.id/)
+- **Challenge**: Multi-department business processes (inventory, finance, sales, logistics) lacked centralized real-time control.
+- **Solution**: Engineered a multi-module Cloud ERP platform with role-based access, automated stock ledger, and dynamic financial reporting.
+- **Impact**: 100% centralized operational visibility & decision-making efficiency.
+
+### 2. BorneoCodeLab Agency Portal — [borneocodelabs.xo.je](https://borneocodelabs.xo.je/)
+- **Challenge**: Regional SMEs needed an accessible, fast, and transparent platform to request web development services.
+- **Solution**: Built an ultra-fast service portal featuring service tier breakdowns, interactive project portfolios, and direct WhatsApp lead routing.
+- **Impact**: Increased client lead conversions by 3x and achieved a 100% PageSpeed performance benchmark.
+
+### 3. PT. Sriwijaya Teknik Utama — [pt-stu.co.id](https://www.pt-stu.co.id/)
+- **Challenge**: Leading fabrication and engineering company required a modern digital showcase for heavy mining industry clients.
+- **Solution**: Developed a clean corporate profile detailing rotating equipment, steel fabrication, and hydraulic hose services.
+
+---
+
+## 🤖 SEO, AEO, & GEO Architecture
+
+This repository incorporates a multi-layer search optimization architecture:
 
 ```mermaid
 graph TD
-    A[BorneoCodeLab Website] --> B[Technical SEO]
+    A[Jefrianus Markus Portfolio] --> B[Technical SEO]
     A --> C[AEO - Answer Engine]
     A --> D[GEO - Generative AI]
 
-    B --> B1[Meta Title & Description]
-    B --> B2[Open Graph & Twitter Cards]
-    B --> B3[Semantic HTML5 Header/Nav/Main/Footer]
+    B --> B1[Canonical & Open Graph Meta]
+    B --> B2[Semantic HTML5 Structure]
+    B --> B3[Sitemap.xml & Robots.txt]
     
-    C --> C1[Structured Q&A Accordion]
-    C --> C2[Voice Search Snippets]
+    C --> C1[Structured FAQ Schema]
+    C --> C2[Voice Assistant Snippets]
 
     D --> D1[Schema.org JSON-LD Graph]
-    D --> D2[LocalBusiness & ProfessionalService Entity]
-    D --> D3[AI Bot Permissive Robots.txt]
+    D --> D2[Person & ProfessionalService Entity]
+    D --> D3[AI Bot Permissive Configuration]
 ```
 
-### Schema.org Graph Integration (`JSON-LD`)
-- **Organization & ProfessionalService**: Detail profil bisnis, lokasi koordinat Samarinda, area layanan Kaltim, jam buka, & kontak.
-- **FAQPage Entity**: Format data Q&A mesin AI untuk pencarian langsung.
-- **Person Entity**: Profil pengembang **Jefrianus Markus** terhubung ke jejaring profesional LinkedIn & Instagram.
+### Schema.org Integration (`JSON-LD Graph`)
+- **`Person` Entity**: Detailed developer profile for Jefrianus Markus, founder relations, sameAs profile links.
+- **`ProfessionalService` & `LocalBusiness` Entity**: Service radius (Samarinda, Kaltim, Indonesia), contact endpoints, geo coordinates.
+- **`FAQPage` Entity**: Machine-readable Q&A pairs tailored for ChatGPT, Perplexity, Claude, and Google SGE recommendations.
 
 ---
 
-## 💻 Panduan Jalankan Lokal (Local Setup)
+## 🎓 Certifications & Background
+
+- 📜 **Google Certified IT Support Specialist** — Google Coursera Professional Certificate
+- 🎓 **Bachelor's Degree** — STIENAS Colorado Samarinda (2014 - 2018)
+- 🏗️ **Operational Discipline**: Hands-on experience managing site logistics in heavy industrial mining environments (PT. IWIP).
+
+---
+
+## 💻 Local Setup & Development
 
 1. **Clone Repository**:
    ```bash
@@ -102,30 +117,28 @@ graph TD
    cd profil
    ```
 
-2. **Jalankan Web Server Lokal**:
-   Anda dapat menggunakan HTTP server sederhana (misalnya Python atau Live Server VS Code):
+2. **Run Local Server**:
    ```bash
-   # Menggunakan Python 3
    python -m http.server 8000
    ```
 
-3. **Akses Website**:
-   Buka browser dan akses [http://localhost:8000](http://localhost:8000).
+3. **Open Browser**:
+   Navigate to `http://localhost:8000`.
 
 ---
 
-## 📬 Kontak & Lokasi
+## 📬 Connect With Me
 
 <div align="center">
 
-| Keterangan | Informasi |
+| Platform | Link / Detail |
 | :--- | :--- |
-| **Brand** | **BorneoCodeLab** |
-| **Founder / Lead Dev** | **Jefrianus Markus** (IT Specialist & Digital Marketing Consultant) |
-| **Alamat** | Jl. AW. Syahranie Gg. 15 RT. 23 Kel. Air Hitam, Kota Samarinda, Kalimantan Timur |
+| **Portfolio Website** | [jefri-orcin.vercel.app](https://jefri-orcin.vercel.app/) |
+| **BorneoCodeLab Portal** | [borneocodelabs.xo.je](https://borneocodelabs.xo.je/) |
+| **LinkedIn** | [linkedin.com/in/jefrianus-markus](https://www.linkedin.com/in/jefrianus-markus) |
 | **WhatsApp** | [+62 823-5450-6569](https://wa.me/6282354506569) |
-| **Email** | [digitalmedia.agensi@gmail.com](mailto:digitalmedia.agensi@gmail.com) |
-| **Social Media** | [![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=flat-square&logo=facebook&logoColor=white)](https://www.facebook.com/jefry195) [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/jefry195) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jefrianus-markus) |
+| **Email** | [jefry.m95@gmail.com](mailto:jefry.m95@gmail.com) / [digitalmedia.agensi@gmail.com](mailto:digitalmedia.agensi@gmail.com) |
+| **Location** | Samarinda, Kalimantan Timur, Indonesia |
 
 </div>
 
@@ -133,6 +146,6 @@ graph TD
 
 <div align="center">
 
-*© 2026 BorneoCodeLab. Developed with ❤️ by **Jefrianus Markus**.*
+*© 2026 Jefrianus Markus (BorneoCodeLab). Engineered with ❤️ in Samarinda, Kalimantan Timur.*
 
 </div>
