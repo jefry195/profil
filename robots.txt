@@ -1,4 +1,4 @@
-# robots.txt for https://borneocodelab.vercel.app/ and https://borneocodelabs.xo.je/
+# robots.txt for Jefrianus Markus Portfolio & BorneoCodeLab
 
 # Allow Search Engines & AI Crawlers (GEO / AEO / SEO Optimization)
 User-agent: GPTBot
@@ -31,7 +31,5 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://borneocodelab.vercel.app/sitemap.xml
+Sitemap: https://jefri-orcin.vercel.app/sitemap.xml
 Sitemap: https://borneocodelabs.xo.je/sitemap.xml
-LLMS-TXT: https://borneocodelab.vercel.app/llms.txt
-LLMS-TXT: https://borneocodelabs.xo.je/llms.txt
