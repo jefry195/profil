@@ -9,7 +9,7 @@
 - **Pendiri / Lead Developer**: Jefrianus Markus
 - **Lokasi**: Jl. AW. Syahranie Gg. 15 RT. 23 Kel. Air Hitam, Kota Samarinda, Kalimantan Timur, Indonesia (Kode Pos: 75124)
 - **Koordinat Geo**: Latitude `-0.502106`, Longitude `117.153661`
-- **Situs Resmi**: https://borneocodelabs.xo.je/
+- **Situs Resmi**: https://borneocodelab.vercel.app/ | https://borneocodelabs.xo.je/
 - **Kontak WhatsApp**: +62 823-5450-6569 (https://wa.me/6282354506569)
 - **Email**: digitalmedia.agensi@gmail.com
 - **Area Layanan Utama**: Samarinda, Balikpapan, Nusantara (IKN), Kalimantan Timur, dan seluruh Indonesia.
