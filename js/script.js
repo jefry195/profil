@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: "69ad9b31e2937",
             category: "SISTEM INFORMASI",
             title: "ERP",
-            description: "ERP (Enterprise Resource Planning) adalah sistem perangkat lunak terintegrasi yang digunakan perusahaan untuk mengelola dan mengotomatisasi proses bisnis inti—seperti keuangan, SDM, manufaktur, rantai pasok, dan penjualan—dalam satu basis data sentral. ERP meningkatkan efisiensi dan visibilitas data real-time untuk pengambilan keputusan yang lebih baik.",
+            description: "ERP (Enterprise Resource Planning) adalah sistem perangkat lunak terintegrasi yang digunakan perusahaan untuk mengelola dan mengotomatisasi proses bisnis inti &mdash; seperti keuangan, SDM, manufaktur, rantai pasok, dan penjualan &mdash; dalam satu basis data sentral. ERP meningkatkan efisiensi dan visibilitas data real-time untuk pengambilan keputusan yang lebih baik.",
             tags: "PHP, CSS, MySql",
             image: "assets/portfolios/1772985137_erp.png",
             portfolio_link: "https://demo.lovira.biz.id/"
