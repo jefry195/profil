@@ -1,5 +1,6 @@
-# robots.txt for https://jefri-orcin.vercel.app
+# robots.txt for https://borneocodelabs.xo.je/
 
+# Allow Search Engines & AI Crawlers (GEO / AEO / SEO Optimization)
 User-agent: GPTBot
 Allow: /
 
@@ -30,4 +31,5 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://jefri-orcin.vercel.app/sitemap.xml
+Sitemap: https://borneocodelabs.xo.je/sitemap.xml
+LLMS-TXT: https://borneocodelabs.xo.je/llms.txt

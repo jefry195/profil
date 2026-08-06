@@ -1,0 +1,8 @@
+# AI Crawling & Generative Engine Policy for BorneoCodeLab
+# Website: https://borneocodelabs.xo.je/
+
+User-Agent: *
+Allow: /
+
+LLMS-TXT: https://borneocodelabs.xo.je/llms.txt
+Sitemap: https://borneocodelabs.xo.je/sitemap.xml

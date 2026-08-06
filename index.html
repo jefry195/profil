@@ -1,1262 +1,789 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Jefrianus Markus - Web Developer &amp; Digital Marketer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags (SEO) -->
+    <title>BorneoCodeLab | Jasa Pembuatan Website Profesional & Digital Solutions Samarinda</title>
+    <meta name="title" content="BorneoCodeLab | Jasa Pembuatan Website Profesional & Digital Solutions Samarinda">
     <meta name="description"
-        content="Portfolio of Jefrianus Markus, a Web Developer and Digital Marketer based in Kalimantan. Delivering innovative digital solutions to scale your business." />
+        content="Jasa pembuatan website profesional untuk bisnis, UMKM, instansi, dan sekolah di Samarinda & Kalimantan. Desain modern, cepat, responsive, dan SEO-friendly.">
     <meta name="keywords"
-        content="Jefrianus Markus, Web Developer, Digital Marketing, SEO, IT Consultant, Web Design, Kalimantan, Freelancer" />
-    <meta name="author" content="Jefrianus Markus" />
-    <meta property="og:title" content="Jefrianus Markus - Digital Portfolio" />
+        content="BorneoCodeLab, Jasa Pembuatan Website Samarinda, Web Developer Samarinda, Jasa Web UMKM, Company Profile, Toko Online WooCommerce, Landing Page, Sistem Informasi, Jefrianus Markus, Digital Marketing Kalimantan">
+    <meta name="author" content="Jefrianus Markus - BorneoCodeLab">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://borneocodelabs.xo.je/">
+    
+    <!-- Geo Meta Tags (Local SEO & GEO) -->
+    <meta name="geo.region" content="ID-KI">
+    <meta name="geo.placename" content="Samarinda">
+    <meta name="geo.position" content="-0.502106;117.153661">
+    <meta name="ICBM" content="-0.502106, 117.153661">
+
+    <!-- Open Graph / Facebook (SEO & Social Sharing) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://borneocodelabs.xo.je/">
+    <meta property="og:site_name" content="BorneoCodeLab">
+    <meta property="og:title" content="BorneoCodeLab | Jasa Pembuatan Website Profesional">
     <meta property="og:description"
-        content="Portfolio of Jefrianus Markus. Custom web solutions and digital marketing." />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
-        rel="stylesheet" />
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#00f2ff", "primary-dark": "#00dbe6",
-                        "secondary": "#1d4ed8",
-                        "background-dark": "#0B1120", "background-card": "#151e32", "text-main": "#e2e8f0",
-                        "text-muted": "#94a3b8",
-                        "accent": "#64ffda",
-                    },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"]
-                    },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1rem", "2xl": "1.5rem", "full": "9999px" },
-                    keyframes: {
-                        pulseCustom: {
-                            '0%, 100%': { boxShadow: '0 0 0 0 rgba(37, 211, 102, 0.7)' },
-                            '70%': { boxShadow: '0 0 0 15px rgba(37, 211, 102, 0)' },
-                        },
-                        shimmer: {
-                            '0%': { transform: 'translateX(-100%)' },
-                            '100%': { transform: 'translateX(100%)' }
-                        }
-                    },
-                    animation: {
-                        pulseCustom: 'pulseCustom 2s infinite',
-                    }
-                },
-            },
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .whatsapp-green {
-                background-color: #25D366;
-            }
-            .whatsapp-green:hover {
-                background-color: #128C7E;
-            }
-            .glass-panel {
-                @apply bg-background-card/80 backdrop-blur-md border border-white/5;
-            }
-            .neon-text {
-                text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
-            }
-            .neon-border {
-                box-shadow: 0 0 15px rgba(0, 242, 255, 0.15);
-            }
-            .reveal {
-                opacity: 0;
-                transform: translateY(40px);
-                transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-            }
-            .reveal.active {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
-    <!-- GEO / AI SEO Structured Data (Schema.org) -->
+        content="Bangun kredibilitas bisnis UMKM Anda dengan website modern, cepat, dan SEO-friendly. Solusi digital terpercaya di Samarinda & Kalimantan.">
+    <meta property="og:image" content="https://borneocodelabs.xo.je/assets/logo_borneocodelab.png">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter Cards (SEO) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://borneocodelabs.xo.je/">
+    <meta name="twitter:title" content="BorneoCodeLab | Jasa Pembuatan Website Profesional">
+    <meta name="twitter:description"
+        content="Bangun kredibilitas bisnis UMKM Anda dengan website modern, cepat, dan SEO-friendly dari BorneoCodeLab.">
+    <meta name="twitter:image" content="https://borneocodelabs.xo.je/assets/logo_borneocodelab.png">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/logo_borneocodelab.png" type="image/png">
+
+    <!-- GEO / AEO / Structured Data Schema.org (JSON-LD Graph) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Person",
-          "@id": "https://jefri-orcin.vercel.app/#person",
-          "name": "Jefrianus Markus",
-          "jobTitle": "IT Specialist & Digital Marketing Consultant",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Samarinda",
-            "addressRegion": "Kalimantan Timur",
-            "addressCountry": "ID"
+          "@type": "Organization",
+          "@id": "https://borneocodelabs.xo.je/#organization",
+          "name": "BorneoCodeLab",
+          "url": "https://borneocodelabs.xo.je/",
+          "logo": "https://borneocodelabs.xo.je/assets/logo_borneocodelab.png",
+          "founder": {
+            "@type": "Person",
+            "name": "Jefrianus Markus",
+            "jobTitle": "Lead Developer & Digital Marketer",
+            "sameAs": [
+              "https://www.linkedin.com/in/jefrianus-markus",
+              "https://www.instagram.com/jefry195",
+              "https://www.facebook.com/jefry195"
+            ]
           },
-          "url": "https://jefri-orcin.vercel.app",
-          "image": "https://jefri-orcin.vercel.app/jef.png",
-          "description": "Jefrianus Markus adalah seorang IT Specialist dan Konsultan Digital Marketing yang berdomisili di Samarinda, Kalimantan Timur."
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+6282354506569",
+            "contactType": "customer support",
+            "areaServed": "ID",
+            "availableLanguage": ["Indonesian", "English"]
+          },
+          "sameAs": [
+            "https://www.facebook.com/jefry195",
+            "https://www.instagram.com/jefry195",
+            "https://www.linkedin.com/in/jefrianus-markus"
+          ]
         },
         {
           "@type": "ProfessionalService",
-          "@id": "https://jefri-orcin.vercel.app/#service",
-          "name": "Jefrianus Markus - IT & Digital Marketing Samarinda",
-          "url": "https://jefri-orcin.vercel.app",
-          "image": "https://jefri-orcin.vercel.app/jef.png",
+          "@id": "https://borneocodelabs.xo.je/#service",
+          "name": "BorneoCodeLab - Jasa Pembuatan Website & Sistem Informasi",
+          "image": "https://borneocodelabs.xo.je/assets/hero_laptop.png",
+          "telephone": "+6282354506569",
+          "email": "digitalmedia.agensi@gmail.com",
           "priceRange": "$$",
           "address": {
             "@type": "PostalAddress",
+            "streetAddress": "Jl. AW. Syahranie Gg. 15 RT. 23 Kel. Air Hitam",
             "addressLocality": "Samarinda",
             "addressRegion": "Kalimantan Timur",
+            "postalCode": "75124",
             "addressCountry": "ID"
           },
-          "areaServed": ["Samarinda", "Kalimantan Timur", "Indonesia"],
-          "provider": {
-            "@id": "https://jefri-orcin.vercel.app/#person"
-          }
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -0.502106,
+            "longitude": 117.153661
+          },
+          "url": "https://borneocodelabs.xo.je/",
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "08:00",
+            "closes": "20:00"
+          },
+          "areaServed": [
+            "Samarinda",
+            "Balikpapan",
+            "Nusantara",
+            "Kalimantan Timur",
+            "Indonesia"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://borneocodelabs.xo.je/#website",
+          "url": "https://borneocodelabs.xo.je/",
+          "name": "BorneoCodeLab",
+          "description": "Jasa Pembuatan Website Profesional untuk Bisnis dan UMKM Anda. Desain modern, cepat, dan SEO-friendly.",
+          "publisher": {
+            "@id": "https://borneocodelabs.xo.je/#organization"
+          },
+          "inLanguage": "id-ID"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://borneocodelabs.xo.je/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Berapa lama proses pembuatan website di BorneoCodeLab?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Waktu pengerjaan pembuatan website di BorneoCodeLab umumnya memakan waktu 7 hingga 14 hari kerja tergantung dari kompleksitas fitur dan kesiapan materi dari klien."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apa saja yang perlu saya siapkan untuk membuat website?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Anda hanya perlu menyiapkan profil singkat bisnis, logo, foto-foto produk/jasa, dan draft konten. Tim BorneoCodeLab akan memandu Anda untuk seluruh proses sisanya."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah ada biaya perpanjangan tahunan?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya, terdapat biaya perpanjangan tahunan untuk memperpanjang masa aktif domain dan hosting (server) agar website Anda tetap online dan dapat diakses dengan lancar."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah website bisa diedit sendiri nantinya?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tentu saja. BorneoCodeLab menyediakan dashboard admin yang user-friendly serta memberikan panduan singkat (training) tentang cara mengedit teks, gambar, maupun produk secara mandiri."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://borneocodelabs.xo.je/#portfolio-list",
+          "name": "Portfolio BorneoCodeLab",
+          "description": "Daftar proyek pembuatan website, toko online, sistem informasi ERP, dan WhatsApp Automation yang telah dikembangkan BorneoCodeLab.",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "CreativeWork",
+                "name": "PT. SRIWIJAYA TEKNIK UTAMA",
+                "genre": "Company Profile",
+                "url": "https://www.pt-stu.co.id/",
+                "image": "https://borneocodelabs.xo.je/assets/portfolios/1772984600_STU.png",
+                "description": "Website company profile perusahaan fabrikasi dan engineering di Samarinda."
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "CreativeWork",
+                "name": "DOOREN'Z PERCETAKAN",
+                "genre": "Toko Online",
+                "url": "https://doorenzcreative.com/",
+                "image": "https://borneocodelabs.xo.je/assets/portfolios/1772984769_dooren.png",
+                "description": "Website toko online e-commerce percetakan kreatif Samarinda."
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "CreativeWork",
+                "name": "DIGITAL RESUME",
+                "genre": "Landing Page",
+                "url": "https://jefri-orcin.vercel.app/",
+                "image": "https://borneocodelabs.xo.je/assets/portfolios/1772984927_jef.png",
+                "description": "Website landing page digital resume dan portfolio pengembang web."
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "CreativeWork",
+                "name": "ERP System",
+                "genre": "Sistem Informasi",
+                "url": "https://demo.lovira.biz.id/",
+                "image": "https://borneocodelabs.xo.je/assets/portfolios/1772985137_erp.png",
+                "description": "Sistem informasi Enterprise Resource Planning terintegrasi untuk manajemen bisnis."
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@type": "CreativeWork",
+                "name": "JeffSender",
+                "genre": "Custom System",
+                "url": "https://wa.doorenzcreative.com/",
+                "image": "https://borneocodelabs.xo.je/assets/portfolios/1776687959_wasender.png",
+                "description": "Sistem otomasian WhatsApp bulk sender & gateway."
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "item": {
+                "@type": "CreativeWork",
+                "name": "Digital Invitation",
+                "genre": "Custom Web",
+                "url": "https://lovira.biz.id/",
+                "image": "https://borneocodelabs.xo.je/assets/portfolios/1781011137_undangan.png",
+                "description": "Platform layanan pembuatan undangan digital interaktif."
+              }
+            }
+          ]
         }
       ]
     }
     </script>
 </head>
 
-<body
-    class="bg-background-dark font-display text-text-main overflow-x-hidden selection:bg-primary selection:text-background-dark">
-    <header
-        class="fixed top-0 z-50 w-full border-b border-white/5 bg-background-dark/90 backdrop-blur-md transition-all">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div class="flex items-center gap-2 group cursor-pointer">
-                <div
-                    class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-background-dark shadow-[0_0_15px_rgba(0,242,255,0.4)]">
-                    <span class="material-symbols-outlined !text-[24px] font-bold">terminal</span>
-                </div>
-                <div class="flex flex-col">
-                    <h2
-                        class="text-xl font-black tracking-tight leading-none text-white group-hover:text-primary transition-colors">
-                        JM.</h2>
-                </div>
-            </div>
-            <div class="hidden lg:flex items-center gap-10">
-                <nav class="flex items-center gap-8">
-                    <a class="text-sm font-medium text-text-muted hover:text-primary transition-colors tracking-wide"
-                        href="#about">ABOUT</a>
-                    <a class="text-sm font-medium text-text-muted hover:text-primary transition-colors tracking-wide"
-                        href="#skills">EXPERTISE</a>
-                    <a class="text-sm font-medium text-text-muted hover:text-primary transition-colors tracking-wide"
-                        href="#services">SERVICES</a>
-                    <a class="text-sm font-medium text-text-muted hover:text-primary transition-colors tracking-wide"
-                        href="#portfolio">PORTFOLIO</a>
-                    <a class="text-sm font-medium text-text-muted hover:text-primary transition-colors tracking-wide"
-                        href="#experience">RESUME</a>
-                </nav>
-                <a class="inline-flex items-center justify-center h-10 px-6 font-bold text-sm tracking-wide text-background-dark transition-all duration-200 bg-primary rounded-lg hover:bg-white hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-background-dark"
-                    href="#contact">
-                    LET'S TALK
-                </a>
-            </div>
-            <button id="mobile-menu-btn"
-                class="lg:hidden text-white hover:text-primary transition-colors focus:outline-none">
-                <span id="menu-icon" class="material-symbols-outlined">menu</span>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo" aria-label="BorneoCodeLab Beranda">
+                <img src="assets/logo_borneocodelab.png" alt="BorneoCodeLab Logo"
+                    style="height: 36px; border-radius: 6px; mix-blend-mode: multiply;">
+                BorneoCodeLab
+            </a>
+
+            <nav class="nav-links" aria-label="Navigasi Utama">
+                <a href="#layanan">Layanan</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#harga">Harga</a>
+                <a href="#cara-kerja">Cara Kerja</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+
+            <a href="https://wa.me/6282354506569" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Konsultasi Gratis</a>
+
+            <button class="mobile-menu-btn" aria-label="Toggle Mobile Menu">
+                <i class="ph ph-list"></i>
             </button>
         </div>
-        <!-- Mobile Menu Panel -->
-        <div id="mobile-menu"
-            class="hidden lg:hidden bg-[#0B1120]/95 backdrop-blur-md border-b border-white/5 absolute w-full top-full left-0 py-6 px-6 shadow-xl">
-            <nav class="flex flex-col gap-6">
-                <a class="mobile-link text-base font-medium text-text-main hover:text-primary transition-colors tracking-wide block"
-                    href="#about">ABOUT</a>
-                <a class="mobile-link text-base font-medium text-text-main hover:text-primary transition-colors tracking-wide block"
-                    href="#skills">EXPERTISE</a>
-                <a class="mobile-link text-base font-medium text-text-main hover:text-primary transition-colors tracking-wide block"
-                    href="#services">SERVICES</a>
-                <a class="mobile-link text-base font-medium text-text-main hover:text-primary transition-colors tracking-wide block"
-                    href="#portfolio">PORTFOLIO</a>
-                <a class="mobile-link text-base font-medium text-text-main hover:text-primary transition-colors tracking-wide block"
-                    href="#experience">RESUME</a>
-                <a class="mobile-link inline-flex mt-2 items-center justify-center h-12 px-6 font-bold text-sm tracking-wide text-background-dark transition-all duration-200 bg-primary rounded-lg hover:bg-white w-full shadow-[0_0_15px_rgba(0,242,255,0.3)]"
-                    href="#contact">
-                    LET'S TALK
-                </a>
-            </nav>
-        </div>
     </header>
-    <main class="relative flex flex-col w-full">
-        <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-            <div
-                class="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-secondary/20 rounded-full blur-[120px] pointer-events-none">
-            </div>
-            <div
-                class="absolute bottom-0 left-0 -ml-20 -mb-20 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] pointer-events-none">
-            </div>
-            <div class="max-w-7xl w-full px-6 grid lg:grid-cols-12 gap-12 items-center relative z-10">
-                <div class="lg:col-span-7 flex flex-col gap-6 pt-10 lg:pt-0">
-                    <div
-                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 w-fit">
-                        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                        <span class="text-xs font-bold tracking-widest text-primary uppercase">Available for New Projects & Consultation</span>
-                    </div>
-                    <h1 class="text-4xl sm:text-6xl font-black tracking-tighter text-white leading-[1.15]">
-                        Helping Businesses Scale Through <br />
-                        <span id="typed-text"
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white neon-text"></span>
-                    </h1>
-                    <p class="text-lg sm:text-xl text-text-muted max-w-2xl leading-relaxed border-l-4 border-primary/50 pl-6">
-                        I'm <strong class="text-white">Jefrianus Markus</strong> — IT Specialist & Digital Marketing Consultant based in Samarinda. I build high-converting websites, develop custom web apps with React & Laravel, and automate business workflows with AI.
-                    </p>
-                    <div class="flex flex-wrap gap-4 pt-4">
-                        <a class="inline-flex items-center justify-center h-14 px-8 font-bold text-base text-background-dark transition-all duration-200 bg-primary rounded-lg hover:bg-white hover:scale-105 shadow-[0_0_20px_rgba(0,242,255,0.3)]"
-                            href="https://wa.me/6282354506569?text=Halo%20Jefrianus,%20saya%20ingin%20konsultasi%20mengenai%20proyek%20website/sistem" target="_blank" rel="noopener noreferrer">
-                            Book Free Consultation
-                            <span class="material-symbols-outlined ml-2 text-lg">calendar_month</span>
-                        </a>
-                        <a class="inline-flex items-center justify-center h-14 px-8 font-bold text-base text-white transition-all duration-200 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 backdrop-blur-sm"
-                            href="#portfolio">
-                            Explore Case Studies
-                        </a>
-                    </div>
-                    <div class="flex items-center gap-8 mt-8 pt-8 border-t border-white/10">
-                        <div>
-                            <p class="text-3xl font-bold text-white">5+</p>
-                            <p class="text-sm text-text-muted uppercase tracking-wider">Years Exp.</p>
-                        </div>
-                        <div>
-                            <p class="text-3xl font-bold text-white">30+</p>
-                            <p class="text-sm text-text-muted uppercase tracking-wider">Projects</p>
-                        </div>
-                        <div>
-                            <p class="text-3xl font-bold text-white">99.9%</p>
-                            <p class="text-sm text-text-muted uppercase tracking-wider">Uptime &amp; Quality</p>
-                        </div>
-                    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge">
+                    <i class="ph-fill ph-star"></i> Solusi Digital Terpercaya
                 </div>
-                <div class="lg:col-span-5 relative">
-                    <div
-                        class="relative z-10 rounded-2xl overflow-hidden border border-white/10 shadow-2xl neon-border rotate-3 hover:rotate-0 transition-transform duration-500 bg-[#0B1120]">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent z-20">
-                        </div>
-                        <img alt="Jefrianus Markus - IT Specialist & Digital Marketer"
-                            class="w-full aspect-[4/5] object-cover object-[center_10%] scale-[1.3] origin-top hover:scale-[1.35] transition-all duration-500"
-                            src="jef.png" />
-                    </div>
-                    <div
-                        class="absolute inset-0 -z-10 translate-x-4 translate-y-4 border border-primary/20 rounded-2xl">
-                    </div>
-                    <div
-                        class="absolute -bottom-10 -right-10 z-20 bg-background-card p-6 rounded-xl border border-white/10 shadow-xl backdrop-blur-md hidden md:block">
-                        <div class="flex items-center gap-4">
-                            <div class="bg-green-500/20 p-3 rounded-full text-green-400">
-                                <span class="material-symbols-outlined">verified</span>
-                            </div>
-                            <div>
-                                <p class="text-xs text-text-muted uppercase">Certified</p>
-                                <p class="font-bold text-white">Google IT Support</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-24 px-6 bg-background-dark relative" id="about">
-            <div class="max-w-7xl mx-auto">
-                <div class="grid lg:grid-cols-12 gap-12">
-                    <div class="lg:col-span-4">
-                        <div class="sticky top-32">
-                            <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">About Me</h2>
-                            <h3 class="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
-                                Building <span class="text-primary">High-Impact</span> Digital Systems.
-                            </h3>
-                            <p class="text-text-muted text-lg leading-relaxed mb-8">
-                                I started my career in visual design before expanding into fullstack web development, digital marketing, and IT infrastructure. Today, I help businesses build high-impact web applications, automate operational workflows with AI, and scale their digital presence.
-                            </p>
-                            <a class="text-white hover:text-primary font-bold inline-flex items-center gap-2 group"
-                                href="#experience">
-                                View Full Journey
-                                <span
-                                    class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="lg:col-span-8 grid md:grid-cols-2 gap-6">
-                        <div
-                            class="glass-panel p-8 rounded-2xl md:translate-y-12 hover:border-primary/50 transition-colors group">
-                            <span
-                                class="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform">verified_user</span>
-                            <h4 class="text-xl font-bold text-white mb-3">Google Certified</h4>
-                            <p class="text-text-muted">Certified Google IT Support Specialist. Rigorous, standardized technical problem solving for infrastructure & system reliability.</p>
-                        </div>
-                        <div class="glass-panel p-8 rounded-2xl hover:border-primary/50 transition-colors group">
-                            <span
-                                class="material-symbols-outlined text-4xl text-secondary mb-6 group-hover:scale-110 transition-transform">code</span>
-                            <h4 class="text-xl font-bold text-white mb-3">Fullstack &amp; Web Apps</h4>
-                            <p class="text-text-muted">Building fast, scalable web systems using modern stacks: React, Next.js, Laravel, REST APIs, and Tailwind CSS.</p>
-                        </div>
-                        <div
-                            class="glass-panel p-8 rounded-2xl md:translate-y-12 hover:border-primary/50 transition-colors group">
-                            <span
-                                class="material-symbols-outlined text-4xl text-accent mb-6 group-hover:scale-110 transition-transform">smart_toy</span>
-                            <h4 class="text-xl font-bold text-white mb-3">AI &amp; Automation</h4>
-                            <p class="text-text-muted">Eliminating repetitive operational tasks by designing automated workflows with n8n, AI agents, and webhook integrations.</p>
-                        </div>
-                        <div
-                            class="glass-panel p-8 rounded-2xl bg-gradient-to-br from-primary/10 to-transparent border-primary/20 hover:border-primary/50 transition-colors group">
-                            <span
-                                class="material-symbols-outlined text-4xl text-white mb-6 group-hover:scale-110 transition-transform">trending_up</span>
-                            <h4 class="text-xl font-bold text-white mb-3">Growth &amp; Technical SEO</h4>
-                            <p class="text-text-muted">Optimizing websites for both traditional Google Search and Generative AI Search (ChatGPT, Gemini, Perplexity) to maximize organic leads.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-24 px-6 bg-[#0f1729]" id="skills">
-            <div class="max-w-7xl mx-auto">
-                <div class="mb-16">
-                    <span class="text-primary font-bold tracking-[0.2em] uppercase text-xs">Capabilities</span>
-                    <h2 class="text-4xl md:text-5xl font-black text-white mt-2 mb-4">Technical Arsenal</h2>
-                    <p class="text-text-muted text-lg max-w-2xl">Proven technology stack and technical competencies applied across 30+ production projects.</p>
-                    <div class="h-1 w-20 bg-primary rounded-full mt-4"></div>
-                </div>
+                <h1>Jasa Pembuatan <br><span class="text-gradient">Website Profesional</span><br> untuk Bisnis Anda</h1>
+                <p>Bangun kredibilitas bisnis UMKM Anda dengan website modern, cepat, dan SEO-friendly. Kami membantu
+                    mengubah pengunjung menjadi pelanggan setia.</p>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Category 1: Frontend & Web -->
-                    <div class="glass-panel p-8 rounded-2xl border border-white/5 hover:border-primary/40 transition-all group">
-                        <div class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
-                            <span class="material-symbols-outlined text-2xl">code</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Frontend &amp; Modern Web</h3>
-                        <p class="text-text-muted text-sm mb-6">Building pixel-perfect, lightning-fast interfaces focused on user experience and speed.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-primary/50 transition-colors">React.js</span>
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-primary/50 transition-colors">Next.js</span>
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-primary/50 transition-colors">Tailwind CSS</span>
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-primary/50 transition-colors">JavaScript (ES6+)</span>
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-primary/50 transition-colors">HTML5 / CSS3</span>
-                        </div>
-                    </div>
-
-                    <!-- Category 2: Backend & APIs -->
-                    <div class="glass-panel p-8 rounded-2xl border border-white/5 hover:border-primary/40 transition-all group">
-                        <div class="w-12 h-12 rounded-xl bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
-                            <span class="material-symbols-outlined text-2xl">database</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Backend &amp; System Architecture</h3>
-                        <p class="text-text-muted text-sm mb-6">Designing robust backends, RESTful APIs, and relational databases for scalable apps.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-secondary/50 transition-colors">Laravel (PHP)</span>
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-secondary/50 transition-colors">Node.js</span>
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-secondary/50 transition-colors">RESTful APIs</span>
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-secondary/50 transition-colors">MySQL</span>
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-secondary/50 transition-colors">WordPress / CMS</span>
-                        </div>
-                    </div>
-
-                    <!-- Category 3: AI & Workflow Automation -->
-                    <div class="glass-panel p-8 rounded-2xl border border-white/5 hover:border-primary/40 transition-all group">
-                        <div class="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
-                            <span class="material-symbols-outlined text-2xl">auto_mode</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">AI &amp; Workflow Automation</h3>
-                        <p class="text-text-muted text-sm mb-6">Automating repetitive operational workflows to save time and reduce manual errors.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-accent/50 transition-colors">n8n Automation</span>
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-accent/50 transition-colors">AI Agents &amp; Chatbots</span>
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-accent/50 transition-colors">Webhooks &amp; Triggers</span>
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-accent/50 transition-colors">API Integration</span>
-                        </div>
-                    </div>
-
-                    <!-- Category 4: Cloud & Deployment -->
-                    <div class="glass-panel p-8 rounded-2xl border border-white/5 hover:border-primary/40 transition-all group">
-                        <div class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
-                            <span class="material-symbols-outlined text-2xl">dns</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Infrastructure &amp; Security</h3>
-                        <p class="text-text-muted text-sm mb-6">Deploying servers, managing DNS/SSL, and ensuring fast, secure, 99.9% uptime deployment.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-primary/50 transition-colors">Google Certified IT Support</span>
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-primary/50 transition-colors">VPS / Vercel Deployment</span>
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-primary/50 transition-colors">cPanel &amp; DNS Management</span>
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-primary/50 transition-colors">SSL &amp; Performance</span>
-                        </div>
-                    </div>
-
-                    <!-- Category 5: SEO & Growth -->
-                    <div class="glass-panel p-8 rounded-2xl border border-white/5 hover:border-primary/40 transition-all group lg:col-span-2">
-                        <div class="w-12 h-12 rounded-xl bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
-                            <span class="material-symbols-outlined text-2xl">trending_up</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Technical SEO &amp; GEO (AI SEO)</h3>
-                        <p class="text-text-muted text-sm mb-6">Combining technical website performance with schema markup so search engines and AI assistants (ChatGPT, Gemini, Perplexity) rank your brand.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-secondary/50 transition-colors">Technical &amp; On-Page SEO</span>
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-secondary/50 transition-colors">GEO (AI Engine Optimization)</span>
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-secondary/50 transition-colors">Schema.org JSON-LD</span>
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-secondary/50 transition-colors">Google Analytics 4 &amp; GSC</span>
-                            <span class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white hover:border-secondary/50 transition-colors">Digital Branding</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-24 px-6 bg-background-dark" id="services">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16">
-                    <span class="text-primary font-bold tracking-[0.2em] uppercase text-xs">Solutions &amp; Value</span>
-                    <h2 class="text-4xl md:text-5xl font-black mt-2 text-white">How I Help Businesses Grow</h2>
-                    <p class="text-text-muted mt-3 max-w-xl mx-auto text-base">Delivering high-performance digital systems, custom web applications, and automated workflows.</p>
-                </div>
-                <div class="grid md:grid-cols-3 gap-6 auto-rows-[minmax(0,_1fr)]">
-                    <div
-                        class="md:col-span-2 glass-panel p-10 rounded-3xl relative overflow-hidden group hover:bg-white/5 transition-all duration-300">
-                        <div class="absolute top-0 right-0 p-10 opacity-10 group-hover:opacity-20 transition-opacity">
-                            <span class="material-symbols-outlined text-[150px] text-primary">web</span>
-                        </div>
-                        <div class="relative z-10 flex flex-col justify-between h-full">
-                            <div>
-                                <div
-                                    class="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center text-primary mb-6">
-                                    <span class="material-symbols-outlined text-3xl">web</span>
-                                </div>
-                                <h3 class="text-2xl font-bold text-white mb-4">High-Converting Company Websites &amp; E-Commerce</h3>
-                                <p class="text-text-muted text-lg max-w-xl">Build instant trust and increase client inquiries with pixel-perfect, mobile-first websites and online stores. Optimized for speed, user experience, and high conversion rates.
-                                </p>
-                            </div>
-                            <div class="mt-8">
-                                <a class="inline-flex items-center text-primary font-bold hover:gap-2 transition-all"
-                                    href="https://wa.me/6282354506569?text=Halo%20Jefrianus,%20saya%20tertarik%20pembuatan%20website%20perusahaan/toko%20online" target="_blank" rel="noopener noreferrer">
-                                    Request Website Audit <span class="material-symbols-outlined ml-1">arrow_forward</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="glass-panel p-10 rounded-3xl relative overflow-hidden group hover:bg-white/5 transition-all duration-300">
-                        <div class="relative z-10 flex flex-col justify-between h-full">
-                            <div>
-                                <div
-                                    class="w-14 h-14 rounded-xl bg-secondary/20 flex items-center justify-center text-secondary mb-6">
-                                    <span class="material-symbols-outlined text-3xl">code_blocks</span>
-                                </div>
-                                <h3 class="text-2xl font-bold text-white mb-4">Custom Web Applications &amp; APIs</h3>
-                                <p class="text-text-muted">Tailored web platforms built with Laravel, React, and RESTful APIs to automate business logic, manage data, and solve complex operational challenges.</p>
-                            </div>
-                            <div class="mt-8">
-                                <a class="inline-flex items-center text-secondary font-bold hover:gap-2 transition-all"
-                                    href="https://wa.me/6282354506569?text=Halo%20Jefrianus,%20saya%20ingin%20diskusi%20pengembangan%20aplikasi%20web" target="_blank" rel="noopener noreferrer">
-                                    Discuss Web App <span class="material-symbols-outlined ml-1">arrow_forward</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="glass-panel p-10 rounded-3xl relative overflow-hidden group hover:bg-white/5 transition-all duration-300">
-                        <div class="relative z-10 flex flex-col justify-between h-full">
-                            <div>
-                                <div
-                                    class="w-14 h-14 rounded-xl bg-accent/20 flex items-center justify-center text-accent mb-6">
-                                    <span class="material-symbols-outlined text-3xl">smart_toy</span>
-                                </div>
-                                <h3 class="text-2xl font-bold text-white mb-4">AI &amp; Workflow Automation</h3>
-                                <p class="text-text-muted">Streamline manual tasks by connecting your tools with n8n automations, custom AI agents, webhooks, and chatbot logic.</p>
-                            </div>
-                            <div class="mt-8">
-                                <a class="inline-flex items-center text-accent font-bold hover:gap-2 transition-all"
-                                    href="https://wa.me/6282354506569?text=Halo%20Jefrianus,%20saya%20ingin%20otomatisasi%20proses%20bisnis%20dengan%20AI/n8n" target="_blank" rel="noopener noreferrer">
-                                    Automate Workflows <span class="material-symbols-outlined ml-1">arrow_forward</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="glass-panel p-10 rounded-3xl relative overflow-hidden group hover:bg-white/5 transition-all duration-300">
-                        <div class="relative z-10 flex flex-col justify-between h-full">
-                            <div>
-                                <div
-                                    class="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center text-primary mb-6">
-                                    <span class="material-symbols-outlined text-3xl">troubleshoot</span>
-                                </div>
-                                <h3 class="text-2xl font-bold text-white mb-4">Technical SEO &amp; GEO (AI SEO)</h3>
-                                <p class="text-text-muted">Ensure your website gets indexed on Google and recognized by AI engines like ChatGPT, Gemini, Perplexity, and Claude.</p>
-                            </div>
-                            <div class="mt-8">
-                                <a class="inline-flex items-center text-primary font-bold hover:gap-2 transition-all"
-                                    href="https://wa.me/6282354506569?text=Halo%20Jefrianus,%20saya%20ingin%20optimasi%20SEO/GEO%20website" target="_blank" rel="noopener noreferrer">
-                                    Boost Organic Leads <span class="material-symbols-outlined ml-1">arrow_forward</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="glass-panel p-10 rounded-3xl relative overflow-hidden group hover:bg-white/5 transition-all duration-300">
-                        <div class="relative z-10 flex flex-col justify-between h-full">
-                            <div>
-                                <div
-                                    class="w-14 h-14 rounded-xl bg-secondary/20 flex items-center justify-center text-secondary mb-6">
-                                    <span class="material-symbols-outlined text-3xl">dns</span>
-                                </div>
-                                <h3 class="text-2xl font-bold text-white mb-4">IT Infrastructure &amp; Security</h3>
-                                <p class="text-text-muted">Server deployment, DNS architecture, SSL certificates, speed tuning, and ongoing technical support guaranteed.</p>
-                            </div>
-                            <div class="mt-8">
-                                <a class="inline-flex items-center text-secondary font-bold hover:gap-2 transition-all"
-                                    href="https://wa.me/6282354506569?text=Halo%20Jefrianus,%20saya%20butuh%20bantuan%20server/DNS/support%20IT" target="_blank" rel="noopener noreferrer">
-                                    Get Server Support <span class="material-symbols-outlined ml-1">arrow_forward</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="md:col-span-3 glass-panel p-10 rounded-3xl relative overflow-hidden group hover:bg-white/5 transition-all duration-300 bg-gradient-to-r from-background-card to-background-dark border-none">
-                        <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-                        <div class="relative z-10 flex flex-col md:flex-row items-center justify-between h-full gap-8">
-                            <div class="flex-1">
-                                <h3 class="text-2xl font-bold text-white mb-2">Need a Custom Technical Solution?</h3>
-                                <p class="text-text-muted text-lg">Whether it's complex system debugging, custom API integrations, or full digital transformation for your company.</p>
-                            </div>
-                            <div>
-                                <a class="inline-flex items-center justify-center h-14 px-8 font-bold text-base text-background-dark transition-all duration-200 bg-white rounded-lg hover:bg-primary hover:text-background-dark hover:scale-105 shadow-lg whitespace-nowrap"
-                                    href="https://wa.me/6282354506569?text=Halo%20Jefrianus,%20saya%20ingin%20konsultasi%20solusi%20custom" target="_blank" rel="noopener noreferrer">
-                                    Book Free Consultation
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Section (Case Studies) -->
-        <section class="py-24 px-6 bg-[#0f1729]" id="portfolio">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16">
-                    <span class="text-primary font-bold tracking-[0.2em] uppercase text-xs">Case Studies</span>
-                    <h2 class="text-4xl md:text-5xl font-black mt-2 text-white">Featured Projects &amp; Impact</h2>
-                    <p class="text-text-muted mt-4 max-w-2xl mx-auto text-lg">Real-world case studies demonstrating technical execution, business problem solving, and measurable impact.</p>
-                </div>
-
-                <!-- Filter Tabs -->
-                <div class="flex flex-wrap justify-center gap-3 mb-12" id="portfolio-filters">
-                    <button onclick="filterPortfolio('all')" data-filter="all" class="portfolio-filter-btn active-filter px-5 py-2 rounded-full text-sm font-bold border border-primary text-primary bg-primary/10 transition-all">All Projects</button>
-                    <button onclick="filterPortfolio('company')" data-filter="company" class="portfolio-filter-btn px-5 py-2 rounded-full text-sm font-bold border border-white/10 text-text-muted hover:border-primary hover:text-primary bg-transparent transition-all">Company Profile</button>
-                    <button onclick="filterPortfolio('ecommerce')" data-filter="ecommerce" class="portfolio-filter-btn px-5 py-2 rounded-full text-sm font-bold border border-white/10 text-text-muted hover:border-primary hover:text-primary bg-transparent transition-all">E-Commerce</button>
-                    <button onclick="filterPortfolio('landing')" data-filter="landing" class="portfolio-filter-btn px-5 py-2 rounded-full text-sm font-bold border border-white/10 text-text-muted hover:border-primary hover:text-primary bg-transparent transition-all">Landing Page</button>
-                    <button onclick="filterPortfolio('system')" data-filter="system" class="portfolio-filter-btn px-5 py-2 rounded-full text-sm font-bold border border-white/10 text-text-muted hover:border-primary hover:text-primary bg-transparent transition-all">Custom Systems</button>
-                </div>
-
-                <!-- Portfolio Grid -->
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
-
-                    <!-- Card 1: BorneoCodeLab -->
-                    <div class="portfolio-card group relative rounded-2xl overflow-hidden border border-white/5 bg-background-card hover:border-primary/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,242,255,0.08)] flex flex-col justify-between" data-category="company">
-                        <div>
-                            <div class="relative overflow-hidden h-48">
-                                <div class="absolute inset-0 bg-gradient-to-br from-[#1d4ed8]/40 to-[#00f2ff]/20 z-10"></div>
-                                <div class="absolute inset-0 flex items-center justify-center z-20">
-                                    <span class="material-symbols-outlined text-[80px] text-white/20">language</span>
-                                </div>
-                                <div class="absolute top-3 right-3 z-30">
-                                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-primary/20 text-primary border border-primary/30">Company Profile</span>
-                                </div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-background-card via-transparent to-transparent z-20"></div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">BorneoCodeLab Service Hub</h3>
-                                
-                                <div class="space-y-3 mb-5 text-sm">
-                                    <div class="p-2.5 rounded-lg bg-white/5 border border-white/5">
-                                        <p class="text-xs text-primary font-bold uppercase mb-0.5">Problem</p>
-                                        <p class="text-text-muted">Local SMEs needed a clear, trusted digital agency platform to request web development services.</p>
-                                    </div>
-                                    <div class="p-2.5 rounded-lg bg-white/5 border border-white/5">
-                                        <p class="text-xs text-accent font-bold uppercase mb-0.5">Solution</p>
-                                        <p class="text-text-muted">Built an ultra-fast web portal with service listings, instant quotation, and automated consultation scheduling.</p>
-                                    </div>
-                                    <div class="p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
-                                        <p class="text-xs text-emerald-400 font-bold uppercase mb-0.5">Result</p>
-                                        <p class="text-emerald-300 font-semibold">3x client inquiry conversion &amp; 100% PageSpeed score.</p>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="px-2 py-1 rounded text-xs bg-white/5 text-text-muted border border-white/5">HTML/CSS</span>
-                                    <span class="px-2 py-1 rounded text-xs bg-white/5 text-text-muted border border-white/5">JavaScript</span>
-                                    <span class="px-2 py-1 rounded text-xs bg-white/5 text-text-muted border border-white/5">Technical SEO</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="px-6 pb-6 pt-0">
-                            <a href="https://borneocodelabs.xo.je" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:gap-3 transition-all">
-                                View Live Site <span class="material-symbols-outlined text-base">open_in_new</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Card 2: Beth Tephillah Streaming -->
-                    <div class="portfolio-card group relative rounded-2xl overflow-hidden border border-white/5 bg-background-card hover:border-primary/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,242,255,0.08)] flex flex-col justify-between" data-category="system">
-                        <div>
-                            <div class="relative overflow-hidden h-48">
-                                <div class="absolute inset-0 bg-gradient-to-br from-[#7c3aed]/40 to-[#00f2ff]/20 z-10"></div>
-                                <div class="absolute inset-0 flex items-center justify-center z-20">
-                                    <span class="material-symbols-outlined text-[80px] text-white/20">live_tv</span>
-                                </div>
-                                <div class="absolute top-3 right-3 z-30">
-                                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-[#7c3aed]/20 text-[#a78bfa] border border-[#7c3aed]/30">Custom System</span>
-                                </div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-background-card via-transparent to-transparent z-20"></div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">GPdI Beth Tephillah Live Stream Portal</h3>
-                                
-                                <div class="space-y-3 mb-5 text-sm">
-                                    <div class="p-2.5 rounded-lg bg-white/5 border border-white/5">
-                                        <p class="text-xs text-primary font-bold uppercase mb-0.5">Problem</p>
-                                        <p class="text-text-muted">Manual updating of video links during weekly live streaming caused delays and extra admin overhead.</p>
-                                    </div>
-                                    <div class="p-2.5 rounded-lg bg-white/5 border border-white/5">
-                                        <p class="text-xs text-accent font-bold uppercase mb-0.5">Solution</p>
-                                        <p class="text-text-muted">Developed a Laravel &amp; React portal integrated with YouTube API for automatic live stream detection.</p>
-                                    </div>
-                                    <div class="p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
-                                        <p class="text-xs text-emerald-400 font-bold uppercase mb-0.5">Result</p>
-                                        <p class="text-emerald-300 font-semibold">100% automated live video delivery for 500+ weekly viewers.</p>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="px-2 py-1 rounded text-xs bg-white/5 text-text-muted border border-white/5">Laravel</span>
-                                    <span class="px-2 py-1 rounded text-xs bg-white/5 text-text-muted border border-white/5">React</span>
-                                    <span class="px-2 py-1 rounded text-xs bg-white/5 text-text-muted border border-white/5">YouTube API</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="px-6 pb-6 pt-0">
-                            <a href="https://bethtephillah.org/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:gap-3 transition-all">
-                                View Live Site <span class="material-symbols-outlined text-base">open_in_new</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Card 3: Toko Online UMKM -->
-                    <div class="portfolio-card group relative rounded-2xl overflow-hidden border border-white/5 bg-background-card hover:border-primary/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,242,255,0.08)] flex flex-col justify-between" data-category="ecommerce">
-                        <div>
-                            <div class="relative overflow-hidden h-48">
-                                <div class="absolute inset-0 bg-gradient-to-br from-[#059669]/40 to-[#34d399]/20 z-10"></div>
-                                <div class="absolute inset-0 flex items-center justify-center z-20">
-                                    <span class="material-symbols-outlined text-[80px] text-white/20">storefront</span>
-                                </div>
-                                <div class="absolute top-3 right-3 z-30">
-                                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-[#059669]/20 text-[#34d399] border border-[#059669]/30">E-Commerce</span>
-                                </div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-background-card via-transparent to-transparent z-20"></div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">Doorenz Creative E-Commerce</h3>
-                                
-                                <div class="space-y-3 mb-5 text-sm">
-                                    <div class="p-2.5 rounded-lg bg-white/5 border border-white/5">
-                                        <p class="text-xs text-primary font-bold uppercase mb-0.5">Problem</p>
-                                        <p class="text-text-muted">Legacy website was slow and unoptimized for mobile checkout, resulting in abandoned orders.</p>
-                                    </div>
-                                    <div class="p-2.5 rounded-lg bg-white/5 border border-white/5">
-                                        <p class="text-xs text-accent font-bold uppercase mb-0.5">Solution</p>
-                                        <p class="text-text-muted">Rebuilt store using WooCommerce, automated shipping calculators, and integrated payment gateway.</p>
-                                    </div>
-                                    <div class="p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
-                                        <p class="text-xs text-emerald-400 font-bold uppercase mb-0.5">Result</p>
-                                        <p class="text-emerald-300 font-semibold">60% faster page loading &amp; 3x organic visitors.</p>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="px-2 py-1 rounded text-xs bg-white/5 text-text-muted border border-white/5">WordPress</span>
-                                    <span class="px-2 py-1 rounded text-xs bg-white/5 text-text-muted border border-white/5">WooCommerce</span>
-                                    <span class="px-2 py-1 rounded text-xs bg-white/5 text-text-muted border border-white/5">Payment Gateway</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="px-6 pb-6 pt-0">
-                            <a href="https://doorenzcreative.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:gap-3 transition-all">
-                                View Live Site <span class="material-symbols-outlined text-base">open_in_new</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Card 4: Landing Page -->
-                    <div class="portfolio-card group relative rounded-2xl overflow-hidden border border-white/5 bg-background-card hover:border-primary/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,242,255,0.08)] flex flex-col justify-between" data-category="landing">
-                        <div>
-                            <div class="relative overflow-hidden h-48">
-                                <div class="absolute inset-0 bg-gradient-to-br from-[#dc2626]/40 to-[#fb7185]/20 z-10"></div>
-                                <div class="absolute inset-0 flex items-center justify-center z-20">
-                                    <span class="material-symbols-outlined text-[80px] text-white/20">campaign</span>
-                                </div>
-                                <div class="absolute top-3 right-3 z-30">
-                                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-[#dc2626]/20 text-[#fb7185] border border-[#dc2626]/30">Landing Page</span>
-                                </div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-background-card via-transparent to-transparent z-20"></div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">High-Converting Product Funnel</h3>
-                                
-                                <div class="space-y-3 mb-5 text-sm">
-                                    <div class="p-2.5 rounded-lg bg-white/5 border border-white/5">
-                                        <p class="text-xs text-primary font-bold uppercase mb-0.5">Problem</p>
-                                        <p class="text-text-muted">Ad traffic had poor conversion due to slow landing page load times and cluttered layout.</p>
-                                    </div>
-                                    <div class="p-2.5 rounded-lg bg-white/5 border border-white/5">
-                                        <p class="text-xs text-accent font-bold uppercase mb-0.5">Solution</p>
-                                        <p class="text-text-muted">Designed a streamlined Tailwind CSS sales page with direct WhatsApp checkout triggers.</p>
-                                    </div>
-                                    <div class="p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
-                                        <p class="text-xs text-emerald-400 font-bold uppercase mb-0.5">Result</p>
-                                        <p class="text-emerald-300 font-semibold">Increased ad click-to-lead conversion rate significantly.</p>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="px-2 py-1 rounded text-xs bg-white/5 text-text-muted border border-white/5">Tailwind CSS</span>
-                                    <span class="px-2 py-1 rounded text-xs bg-white/5 text-text-muted border border-white/5">Conversion Copy</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="px-6 pb-6 pt-0">
-                            <span class="inline-flex items-center gap-2 text-text-muted text-sm">
-                                <span class="material-symbols-outlined text-base">lock</span> Client Private Project
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Card 5: Corporate Company Profile -->
-                    <div class="portfolio-card group relative rounded-2xl overflow-hidden border border-white/5 bg-background-card hover:border-primary/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,242,255,0.08)] flex flex-col justify-between" data-category="company">
-                        <div>
-                            <div class="relative overflow-hidden h-48">
-                                <div class="absolute inset-0 bg-gradient-to-br from-[#0369a1]/40 to-[#38bdf8]/20 z-10"></div>
-                                <div class="absolute inset-0 flex items-center justify-center z-20">
-                                    <span class="material-symbols-outlined text-[80px] text-white/20">business</span>
-                                </div>
-                                <div class="absolute top-3 right-3 z-30">
-                                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-[#0369a1]/20 text-[#38bdf8] border border-[#0369a1]/30">Company Profile</span>
-                                </div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-background-card via-transparent to-transparent z-20"></div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">Corporate Engineering Website</h3>
-                                
-                                <div class="space-y-3 mb-5 text-sm">
-                                    <div class="p-2.5 rounded-lg bg-white/5 border border-white/5">
-                                        <p class="text-xs text-primary font-bold uppercase mb-0.5">Problem</p>
-                                        <p class="text-text-muted">Industrial client lacked digital presence to present engineering capabilities to enterprise buyers.</p>
-                                    </div>
-                                    <div class="p-2.5 rounded-lg bg-white/5 border border-white/5">
-                                        <p class="text-xs text-accent font-bold uppercase mb-0.5">Solution</p>
-                                        <p class="text-text-muted">Built modern corporate portal with service catalog, downloadable profile, and Local SEO optimization.</p>
-                                    </div>
-                                    <div class="p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
-                                        <p class="text-xs text-emerald-400 font-bold uppercase mb-0.5">Result</p>
-                                        <p class="text-emerald-300 font-semibold">Ranked #1 on Google for regional engineering terms.</p>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="px-2 py-1 rounded text-xs bg-white/5 text-text-muted border border-white/5">SEO Local</span>
-                                    <span class="px-2 py-1 rounded text-xs bg-white/5 text-text-muted border border-white/5">Corporate Branding</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="px-6 pb-6 pt-0">
-                            <span class="inline-flex items-center gap-2 text-text-muted text-sm">
-                                <span class="material-symbols-outlined text-base">lock</span> Client Private Project
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Card 6: Enterprise ERP System Demo -->
-                    <div class="portfolio-card group relative rounded-2xl overflow-hidden border border-primary/30 bg-background-card hover:border-primary transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,242,255,0.12)] flex flex-col justify-between" data-category="system">
-                        <div>
-                            <div class="relative overflow-hidden h-48">
-                                <div class="absolute inset-0 bg-gradient-to-br from-[#0284c7]/50 to-[#00f2ff]/30 z-10"></div>
-                                <div class="absolute inset-0 flex items-center justify-center z-20">
-                                    <span class="material-symbols-outlined text-[80px] text-white/25">grid_view</span>
-                                </div>
-                                <div class="absolute top-3 right-3 z-30">
-                                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-primary/20 text-primary border border-primary/30">ERP / Enterprise System</span>
-                                </div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-background-card via-transparent to-transparent z-20"></div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">Enterprise ERP &amp; Operations System</h3>
-                                
-                                <div class="space-y-3 mb-5 text-sm">
-                                    <div class="p-2.5 rounded-lg bg-white/5 border border-white/5">
-                                        <p class="text-xs text-primary font-bold uppercase mb-0.5">Problem</p>
-                                        <p class="text-text-muted">Multi-department business processes (inventory, finance, sales, &amp; logistics) lacked centralized real-time control.</p>
-                                    </div>
-                                    <div class="p-2.5 rounded-lg bg-white/5 border border-white/5">
-                                        <p class="text-xs text-accent font-bold uppercase mb-0.5">Solution</p>
-                                        <p class="text-text-muted">Engineered a complete Cloud ERP platform with multi-module management, role permissions, and live analytics.</p>
-                                    </div>
-                                    <div class="p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
-                                        <p class="text-xs text-emerald-400 font-bold uppercase mb-0.5">Result</p>
-                                        <p class="text-emerald-300 font-semibold">100% centralized resource visibility &amp; operational efficiency.</p>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="px-2 py-1 rounded text-xs bg-white/5 text-text-muted border border-white/5">ERP Architecture</span>
-                                    <span class="px-2 py-1 rounded text-xs bg-white/5 text-text-muted border border-white/5">Laravel / PHP</span>
-                                    <span class="px-2 py-1 rounded text-xs bg-white/5 text-text-muted border border-white/5">RESTful APIs</span>
-                                    <span class="px-2 py-1 rounded text-xs bg-white/5 text-text-muted border border-white/5">MySQL</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="px-6 pb-6 pt-0">
-                            <a href="https://demo.lovira.biz.id/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:gap-3 transition-all">
-                                Try Live ERP Demo <span class="material-symbols-outlined text-base">open_in_new</span>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- CTA View All -->
-                <div class="text-center mt-14">
-                    <a href="https://borneocodelabs.xo.je/#portfolio" target="_blank" rel="noopener noreferrer"
-                        class="inline-flex items-center gap-3 h-14 px-10 font-bold text-base text-background-dark bg-primary rounded-xl hover:bg-white hover:scale-105 transition-all duration-200 shadow-[0_0_20px_rgba(0,242,255,0.3)]">
-                        Explore Full Portfolio Hub
-                        <span class="material-symbols-outlined">open_in_new</span>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/6282354506569" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        <i class="ph-fill ph-whatsapp-logo"></i> Konsultasi via WhatsApp
                     </a>
-                    <p class="text-text-muted text-sm mt-4">Managed via <a href="https://borneocodelabs.xo.je" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-semibold">BorneoCodeLab</a> — Web Development &amp; IT Solutions</p>
+                    <a href="#portfolio" class="btn btn-secondary">Lihat Portfolio</a>
+                </div>
+
+                <div class="social-proof" style="display: none;">
+                    <div class="avatars">
+                        <img src="https://i.pravatar.cc/100?img=1" alt="User Client 1">
+                        <img src="https://i.pravatar.cc/100?img=3" alt="User Client 2">
+                        <img src="https://i.pravatar.cc/100?img=5" alt="User Client 3">
+                        <div class="avatar-more">+50</div>
+                    </div>
+                    <span>Dipercaya oleh 50+ UMKM di Indonesia</span>
                 </div>
             </div>
-        </section>
 
-        <!-- NEW: Social Proof & Testimonials Section -->
-        <section class="py-24 px-6 bg-[#0B1120] relative border-t border-white/5" id="testimonials">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16">
-                    <span class="text-primary font-bold tracking-[0.2em] uppercase text-xs">Trust &amp; Reputation</span>
-                    <h2 class="text-4xl md:text-5xl font-black text-white mt-2 mb-4">Client Feedback &amp; Results</h2>
-                    <p class="text-text-muted text-lg max-w-xl mx-auto">Hear directly from clients and business owners who have transformed their digital footprint.</p>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Testimonial 1 -->
-                    <div class="glass-panel p-8 rounded-2xl border border-white/5 hover:border-primary/40 transition-all flex flex-col justify-between">
-                        <div>
-                            <div class="flex text-amber-400 gap-1 mb-4">
-                                <span class="material-symbols-outlined fill-current">star</span>
-                                <span class="material-symbols-outlined fill-current">star</span>
-                                <span class="material-symbols-outlined fill-current">star</span>
-                                <span class="material-symbols-outlined fill-current">star</span>
-                                <span class="material-symbols-outlined fill-current">star</span>
-                            </div>
-                            <p class="text-text-main leading-relaxed mb-6 italic">"Website baru kami sangat cepat dan tampilannya jauh lebih profesional. Peningkatan inquiry pelanggan terasa signifikan sejak peluncuran!"</p>
-                        </div>
-                        <div class="flex items-center gap-4 border-t border-white/10 pt-4">
-                            <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
-                                DC
-                            </div>
-                            <div>
-                                <h4 class="text-white font-bold text-sm">Doorenz Creative</h4>
-                                <p class="text-xs text-text-muted">E-Commerce Client</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 2 -->
-                    <div class="glass-panel p-8 rounded-2xl border border-white/5 hover:border-primary/40 transition-all flex flex-col justify-between">
-                        <div>
-                            <div class="flex text-amber-400 gap-1 mb-4">
-                                <span class="material-symbols-outlined fill-current">star</span>
-                                <span class="material-symbols-outlined fill-current">star</span>
-                                <span class="material-symbols-outlined fill-current">star</span>
-                                <span class="material-symbols-outlined fill-current">star</span>
-                                <span class="material-symbols-outlined fill-current">star</span>
-                            </div>
-                            <p class="text-text-main leading-relaxed mb-6 italic">"Integrasi sistem live streaming otomatis dengan YouTube sangat membantu jemaat kami. Tidak perlu setting manual tiap minggu lagi!"</p>
-                        </div>
-                        <div class="flex items-center gap-4 border-t border-white/10 pt-4">
-                            <div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center text-secondary font-bold">
-                                BT
-                            </div>
-                            <div>
-                                <h4 class="text-white font-bold text-sm">GPdI Beth Tephillah</h4>
-                                <p class="text-xs text-text-muted">System &amp; Web Client</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 3 -->
-                    <div class="glass-panel p-8 rounded-2xl border border-white/5 hover:border-primary/40 transition-all flex flex-col justify-between">
-                        <div>
-                            <div class="flex text-amber-400 gap-1 mb-4">
-                                <span class="material-symbols-outlined fill-current">star</span>
-                                <span class="material-symbols-outlined fill-current">star</span>
-                                <span class="material-symbols-outlined fill-current">star</span>
-                                <span class="material-symbols-outlined fill-current">star</span>
-                                <span class="material-symbols-outlined fill-current">star</span>
-                            </div>
-                            <p class="text-text-main leading-relaxed mb-6 italic">"Jefrianus sangat responsif dan paham betul dari segi teknis IT maupun strategi digital marketing. Solusinya tepat sasaran."</p>
-                        </div>
-                        <div class="flex items-center gap-4 border-t border-white/10 pt-4">
-                            <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">
-                                ST
-                            </div>
-                            <div>
-                                <h4 class="text-white font-bold text-sm">PT. Sriwijaya Teknik Utama</h4>
-                                <p class="text-xs text-text-muted">Marketing &amp; Web Project</p>
-                            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="assets/hero_laptop.png" alt="Laptop showing website development code by BorneoCodeLab">
+                    <div class="floating-badge">
+                        <div class="icon-up"><i class="ph-fill ph-trend-up"></i></div>
+                        <div class="badge-text">
+                            <span class="label">Traffic Growth</span>
+                            <span class="value">+128%</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="py-20 px-6 bg-[#0B1120] relative border-t border-white/5">
-            <div class="max-w-7xl mx-auto">
-                <div class="grid lg:grid-cols-12 gap-12 items-center">
-                    <div class="lg:col-span-5">
-                        <h2 class="text-3xl font-bold text-white mb-4">Digital Presence</h2>
-                        <p class="text-text-muted text-lg">Connect with me on professional networks or subscribe to my
-                            channel for tech insights.</p>
-                    </div>
-                    <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6">
-                        <a class="flex items-center gap-4 p-6 rounded-2xl bg-gradient-to-br from-[#0a66c2]/20 to-transparent border border-[#0a66c2]/30 hover:bg-[#0a66c2]/30 transition-all group"
-                            href="https://www.linkedin.com/in/jefrianus-markus" target="_blank"
-                            rel="noopener noreferrer">
-                            <div
-                                class="w-12 h-12 rounded-full bg-[#0a66c2] flex items-center justify-center text-white shrink-0">
-                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold text-white group-hover:text-[#0a66c2] transition-colors">
-                                    LinkedIn Profile</h3>
-                                <p class="text-sm text-text-muted">190+ Connections</p>
-                            </div>
+    <!-- Tech Stack Banner -->
+    <section class="tech-stack" aria-label="Teknologi yang Digunakan">
+        <div class="container">
+            <p class="tech-title">DIBUAT DENGAN TEKNOLOGI MODERN</p>
+            <div class="tech-logos">
+                <div class="tech-item"><i class="ph ph-squares-four"></i> WordPress</div>
+                <div class="tech-item"><i class="ph ph-shopping-cart"></i> WooCommerce</div>
+                <div class="tech-item"><i class="ph ph-atom"></i> React</div>
+                <div class="tech-item"><i class="ph ph-cloud"></i> Google Cloud</div>
+                <div class="tech-item"><i class="ph ph-magnifying-glass"></i> SEO Optimized</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="layanan" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Melayani Pembuatan Website</h2>
+                <p>Solusi digital lengkap yang dirancang khusus untuk memenuhi segala kebutuhan digitalisasi bisnis Anda.</p>
+            </div>
+
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="icon-wrapper"><i class="ph ph-buildings"></i></div>
+                    <h3>Company Profile</h3>
+                    <p>Website representatif untuk membangun citra profesional dan kredibilitas di mata klien.</p>
+                </article>
+                <article class="service-card">
+                    <div class="icon-wrapper"><i class="ph ph-graduation-cap"></i></div>
+                    <h3>Web Sekolah / E-Learning</h3>
+                    <p>Platform akademik, pendaftaran online, dan sistem materi pembelajaran jarak jauh.</p>
+                </article>
+                <article class="service-card">
+                    <div class="icon-wrapper"><i class="ph ph-storefront"></i></div>
+                    <h3>Web UMKM / Toko Online</h3>
+                    <p>Tingkatkan penjualan dengan jangkauan luas terintegrasi order dan pembayaran.</p>
+                </article>
+                <article class="service-card">
+                    <div class="icon-wrapper"><i class="ph ph-desktop"></i></div>
+                    <h3>Sistem Informasi</h3>
+                    <p>Sistem manajemen data lengkap mulai dari Inventaris, Absensi, hingga aplikasi Kasir.</p>
+                </article>
+                <article class="service-card">
+                    <div class="icon-wrapper"><i class="ph ph-rocket-launch"></i></div>
+                    <h3>Landing Page</h3>
+                    <p>Halaman web yang fokus pada konversi, promosi produk spesifik atau pengiklanan.</p>
+                </article>
+                <article class="service-card">
+                    <div class="icon-wrapper"><i class="ph ph-code"></i></div>
+                    <h3>Custom Permintaan</h3>
+                    <p>Pengembangan website kustom dengan fitur dinamis sesuai dengan model bisnis spesifik Anda.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keunggulan Section -->
+    <section id="keunggulan" class="services bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">KEUNGGULAN KAMI</span>
+                <h2>Keunggulan Layanan</h2>
+                <p>Pastikan Anda mendapatkan kualitas terbaik di setiap aspek website Anda.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item"><i class="ph-fill ph-device-mobile-camera"></i> Responsive (Mobile Friendly)</div>
+                <div class="feature-item"><i class="ph-fill ph-user-circle"></i> Halaman Admin (Login)</div>
+                <div class="feature-item"><i class="ph-fill ph-database"></i> CRUD Data (Tambah, Edit, Hapus)</div>
+                <div class="feature-item"><i class="ph-fill ph-chart-bar"></i> Dashboard Statistik</div>
+                <div class="feature-item"><i class="ph-fill ph-hard-drives"></i> Integrasi Database</div>
+                <div class="feature-item"><i class="ph-fill ph-globe-hemisphere-east"></i> Hosting &amp; Domain (Opsional)</div>
+                <div class="feature-item"><i class="ph-fill ph-wrench"></i> Maintenance 1 bulan</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section id="cara-kerja" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">PROSES KERJA</span>
+                <h2>Bagaimana Kami Bekerja?</h2>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Konsultasi &amp; Goal</h3>
+                    <p>Diskusikan kebutuhan bisnis Anda, penentuan fitur, dan kesepakatan harga.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Desain &amp; Data</h3>
+                    <p>Kami merancang struktur website dan Anda menyiapkan materi konten/foto/detail.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Development</h3>
+                    <p>Proses coding dan pengembangan website hingga siap online.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Launch &amp; Training</h3>
+                    <p>Website online! Kami berikan panduan cara mengelola website Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="portfolio-header">
+                <div class="section-header left-align">
+                    <h2>Portfolio Pilihan</h2>
+                    <p>Lihat hasil karya kami yang telah membantu bisnis klien bertumbuh.</p>
+                </div>
+                <a href="#portfolio" class="view-all">Lihat Semua Project &rarr;</a>
+            </div>
+
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Portfolios pre-rendered for SEO / AEO / GEO -->
+                <div class="portfolio-card" data-id="1">
+                    <div class="portfolio-image">
+                        <a href="https://www.pt-stu.co.id/" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/portfolios/1772984600_STU.png" alt="PT. SRIWIJAYA TEKNIK UTAMA - Company Profile Website oleh BorneoCodeLab Samarinda" loading="lazy">
                         </a>
-                        <a class="flex items-center gap-4 p-6 rounded-2xl bg-gradient-to-br from-[#E1306C]/20 to-transparent border border-[#E1306C]/30 hover:bg-[#E1306C]/30 transition-all group"
-                            href="https://www.instagram.com/jefry195" target="_blank" rel="noopener noreferrer">
-                            <div
-                                class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#FFDC80] via-[#FD1D1D] to-[#833AB4] flex items-center justify-center text-white shrink-0">
-                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.88z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold text-white group-hover:text-[#E1306C] transition-colors">
-                                    Instagram Profile</h3>
-                                <p class="text-sm text-text-muted">@jefry195</p>
-                            </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="tag">COMPANY PROFILE</span>
+                        <a href="https://www.pt-stu.co.id/" target="_blank" rel="noopener noreferrer">
+                            <h3>PT. SRIWIJAYA TEKNIK UTAMA</h3>
+                        </a>
+                        <p>PT. Sriwijaya Teknik Utama (STU) adalah perusahaan fabrikasi, perbaikan, dan engineering terkemuka yang berbasis di Samarinda, Kalimantan Timur. Didirikan untuk mendukung industri pertambangan dan alat berat, STU spesialis dalam layanan mesin, fabrikasi baja, rotating equipment, serta hydraulic hose.</p>
+                        <div class="tags">
+                            <span>WordPress</span><span>WooCommerce</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-id="2">
+                    <div class="portfolio-image">
+                        <a href="https://doorenzcreative.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/portfolios/1772984769_dooren.png" alt="DOOREN'Z PERCETAKAN - Toko Online WooCommerce oleh BorneoCodeLab Samarinda" loading="lazy">
                         </a>
                     </div>
+                    <div class="portfolio-content">
+                        <span class="tag">TOKO ONLINE</span>
+                        <a href="https://doorenzcreative.com/" target="_blank" rel="noopener noreferrer">
+                            <h3>DOOREN'Z PERCETAKAN</h3>
+                        </a>
+                        <p>Doorenz Percetakan Samarinda adalah perusahaan yang bergerak di bidang jasa percetakan dengan pengalaman lebih dari satu dekade.</p>
+                        <div class="tags">
+                            <span>Wordpress</span><span>WooCoomerce</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-id="3">
+                    <div class="portfolio-image">
+                        <a href="https://jefri-orcin.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/portfolios/1772984927_jef.png" alt="DIGITAL RESUME - Landing Page Development &amp; Digital Marketing BorneoCodeLab" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="tag">LANDING PAGE</span>
+                        <a href="https://jefri-orcin.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            <h3>DIGITAL RESUME</h3>
+                        </a>
+                        <p>I specialize in Web Development and Digital Marketing, creating innovative and responsive digital solutions to enhance brand awareness and conversions.</p>
+                        <div class="tags">
+                            <span>React</span><span>Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-id="69ad9b31e2937">
+                    <div class="portfolio-image">
+                        <a href="https://demo.lovira.biz.id/" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/portfolios/1772985137_erp.png" alt="ERP System - Sistem Informasi Enterprise Resource Planning BorneoCodeLab Samarinda" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="tag">SISTEM INFORMASI</span>
+                        <a href="https://demo.lovira.biz.id/" target="_blank" rel="noopener noreferrer">
+                            <h3>ERP</h3>
+                        </a>
+                        <p>ERP (Enterprise Resource Planning) adalah sistem perangkat lunak terintegrasi yang digunakan perusahaan untuk mengelola dan mengotomatisasi proses bisnis inti—seperti keuangan, SDM, manufaktur, rantai pasok, dan penjualan—dalam satu basis data sentral. ERP meningkatkan efisiensi dan visibilitas data real-time untuk pengambilan keputusan yang lebih baik.</p>
+                        <div class="tags">
+                            <span>PHP</span><span>CSS</span><span>MySql</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-id="69e61b57bc000">
+                    <div class="portfolio-image">
+                        <a href="https://wa.doorenzcreative.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/portfolios/1776687959_wasender.png" alt="JeffSender - WhatsApp Automation &amp; Bulk Sender oleh BorneoCodeLab" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="tag">CUSTOM</span>
+                        <a href="https://wa.doorenzcreative.com/" target="_blank" rel="noopener noreferrer">
+                            <h3>JeffSender</h3>
+                        </a>
+                        <p>Whatsapp Automation system for bulk messaging, campaign management, and API integration.</p>
+                        <div class="tags">
+                            <span>Whatsapp Bulk Sender</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-id="6a2812c155481">
+                    <div class="portfolio-image">
+                        <a href="https://lovira.biz.id/" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/portfolios/1781011137_undangan.png" alt="Digital Invitation - Jasa Undangan Digital Pernikahan BorneoCodeLab" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="tag">CUSTOM</span>
+                        <a href="https://lovira.biz.id/" target="_blank" rel="noopener noreferrer">
+                            <h3>Digital Invitation</h3>
+                        </a>
+                        <p>Jasa Undangan Digital interaktif dan responsive untuk acara pernikahan &amp; event spesial.</p>
+                        <div class="tags">
+                            <span>Wordpress</span><span>Digital Invitation</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-        <section class="py-24 px-6 bg-[#0f1729]" id="experience">
-            <div class="max-w-4xl mx-auto">
-                <div class="flex items-center gap-4 mb-12">
-                    <h2 class="text-3xl font-bold text-white">Career &amp; Experience Journey</h2>
-                    <div class="flex-1 h-px bg-white/10"></div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="harga" class="pricing bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pilihan Paket Harga</h2>
+                <p>Investasi terbaik untuk masa depan digital bisnis Anda. Hemat dan terjangkau.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Pricing 1 -->
+                <div class="pricing-card">
+                    <div class="plan-name">Starter</div>
+                    <p class="plan-desc">Cocok untuk UMKM baru yang butuh kehadiran online dasar.</p>
+
+                    <ul class="features">
+                        <li><i class="ph-fill ph-check-circle"></i> Max. 5 Halaman</li>
+                        <li><i class="ph-fill ph-check-circle"></i> Mobile Responsive</li>
+                        <li><i class="ph-fill ph-check-circle"></i> Gratis Domain .com (1 Thn)</li>
+                        <li><i class="ph-fill ph-check-circle"></i> Integrasi WhatsApp</li>
+                        <li class="disabled"><i class="ph ph-minus-circle"></i> SEO Optimization</li>
+                    </ul>
+
+                    <a href="https://wa.me/6282354506569?text=Halo%20Jefri%2C%20saya%20tertarik%20dengan%20paket%20website%20Starter."
+                        class="btn btn-outline" target="_blank" rel="noopener noreferrer">Pilih Starter</a>
                 </div>
-                <div class="space-y-8">
-                    <!-- Current Role -->
-                    <div class="relative pl-8 md:pl-0">
-                        <div class="hidden md:block absolute left-[165px] top-0 bottom-0 w-px bg-white/10"></div>
-                        <div class="flex flex-col md:flex-row gap-4 md:gap-16">
-                            <div class="md:w-32 md:text-right pt-1 shrink-0">
-                                <span class="text-primary font-bold">2023 - Present</span>
-                            </div>
-                            <div
-                                class="relative flex-1 bg-background-card p-6 rounded-xl border border-primary/30 hover:border-primary/50 transition-colors shadow-lg">
-                                <div
-                                    class="hidden md:block absolute top-6 -left-[37px] w-3 h-3 rounded-full bg-primary shadow-[0_0_10px_rgba(0,242,255,0.8)] z-10">
-                                </div>
-                                <h3 class="text-xl font-bold text-white mb-1">Fullstack Web Developer &amp; IT Consultant</h3>
-                                <p class="text-sm text-primary font-semibold mb-4">BorneoCodeLab &amp; Independent Projects</p>
-                                <ul class="text-text-main leading-relaxed list-disc list-inside space-y-2 text-sm">
-                                    <li>Architecting custom web applications with React, Next.js, and Laravel for clients.</li>
-                                    <li>Designing n8n automated workflows and AI integrations for operational efficiency.</li>
-                                    <li>Implementing Technical SEO and GEO (AI Search Optimization) to boost client search rankings.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Heavy Transport / Operations -->
-                    <div class="relative pl-8 md:pl-0">
-                        <div class="hidden md:block absolute left-[165px] top-0 bottom-0 w-px bg-white/10"></div>
-                        <div class="flex flex-col md:flex-row gap-4 md:gap-16">
-                            <div class="md:w-32 md:text-right pt-1 shrink-0">
-                                <span class="text-text-muted font-bold">2023 - 2024</span>
-                            </div>
-                            <div
-                                class="relative flex-1 bg-background-card p-6 rounded-xl border border-white/5 hover:border-white/20 transition-colors">
-                                <div
-                                    class="hidden md:block absolute top-6 -left-[37px] w-3 h-3 rounded-full bg-white/20 border border-white/40 z-10">
-                                </div>
-                                <h3 class="text-xl font-bold text-white mb-1">Heavy Operations &amp; Site Logistics</h3>
-                                <p class="text-sm text-text-muted mb-3">PT. Indonesia Weda Bay Industrial Park (IWIP)</p>
-                                <p class="text-text-main text-sm leading-relaxed mb-3">
-                                    Managed site logistics and heavy equipment transport in high-demand industrial mining operations while continuing freelance web development projects. 
-                                </p>
-                                <div class="p-3 rounded-lg bg-white/5 border border-white/5 text-xs text-text-muted">
-                                    💡 <strong class="text-white">Career Context:</strong> Demonstrates high-pressure problem solving, operational discipline, safety standards, and adaptability in challenging industrial environments.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Pricing 2 (Popular) -->
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Paling Laris</div>
+                    <div class="plan-name">Business</div>
+                    <p class="plan-desc">Untuk bisnis yang ingin tampil lebih profesional dan mudah ditemukan.</p>
 
-                    <!-- Digital Marketing -->
-                    <div class="relative pl-8 md:pl-0">
-                        <div class="hidden md:block absolute left-[165px] top-0 bottom-0 w-px bg-white/10"></div>
-                        <div class="flex flex-col md:flex-row gap-4 md:gap-16">
-                            <div class="md:w-32 md:text-right pt-1 shrink-0">
-                                <span class="text-text-muted font-bold">2022 - 2023</span>
-                            </div>
-                            <div
-                                class="relative flex-1 bg-background-card p-6 rounded-xl border border-white/5 hover:border-white/20 transition-colors">
-                                <div
-                                    class="hidden md:block absolute top-6 -left-[37px] w-3 h-3 rounded-full bg-white/20 border border-white/40 z-10">
-                                </div>
-                                <h3 class="text-xl font-bold text-white mb-1">Digital Marketing Specialist</h3>
-                                <p class="text-sm text-text-muted mb-4">PT. Sriwijaya Teknik Utama</p>
-                                <ul class="text-text-main leading-relaxed list-disc list-inside space-y-2 text-sm">
-                                    <li>Developed digital marketing strategies to generate B2B engineering leads.</li>
-                                    <li>Optimized corporate website for search rankings and improved organic lead conversions.</li>
-                                    <li>Managed social media campaigns, technical blog content, and marketing media.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <ul class="features">
+                        <li><i class="ph-fill ph-check-circle"></i> 8-10 Halaman</li>
+                        <li><i class="ph-fill ph-check-circle"></i> Desain Premium &amp; Custom</li>
+                        <li><i class="ph-fill ph-check-circle"></i> SEO Dasar (Google Friendly)</li>
+                        <li><i class="ph-fill ph-check-circle"></i> Email Bisnis (nama@domain.com)</li>
+                        <li><i class="ph-fill ph-check-circle"></i> Gratis Revisi 2x</li>
+                    </ul>
 
-                    <!-- Creative Marketing -->
-                    <div class="relative pl-8 md:pl-0">
-                        <div class="hidden md:block absolute left-[165px] top-0 bottom-0 w-px bg-white/10"></div>
-                        <div class="flex flex-col md:flex-row gap-4 md:gap-16">
-                            <div class="md:w-32 md:text-right pt-1 shrink-0">
-                                <span class="text-text-muted font-bold">2019 - Present</span>
-                            </div>
-                            <div
-                                class="relative flex-1 bg-background-card p-6 rounded-xl border border-white/5 hover:border-white/20 transition-colors">
-                                <div
-                                    class="hidden md:block absolute top-6 -left-[37px] w-3 h-3 rounded-full bg-white/20 border border-white/40 z-10">
-                                </div>
-                                <h3 class="text-xl font-bold text-white mb-1">Marketing &amp; Brand Consultant</h3>
-                                <p class="text-sm text-text-muted mb-4">Dooren'z Creative</p>
-                                <p class="text-text-main leading-relaxed text-sm">Managed marketing campaigns, brand identity, screen printing packaging, and e-commerce growth strategies.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="https://wa.me/6282354506569?text=Halo%20Jefri%2C%20saya%20tertarik%20dengan%20paket%20website%20Business."
+                        class="btn btn-primary" target="_blank" rel="noopener noreferrer">Pilih Business</a>
+                </div>
 
-                    <!-- Graphic Designer -->
-                    <div class="relative pl-8 md:pl-0">
-                        <div class="hidden md:block absolute left-[165px] top-0 bottom-0 w-px bg-white/10"></div>
-                        <div class="flex flex-col md:flex-row gap-4 md:gap-16">
-                            <div class="md:w-32 md:text-right pt-1 shrink-0">
-                                <span class="text-text-muted font-bold">2017 - 2019</span>
-                            </div>
-                            <div
-                                class="relative flex-1 bg-background-card p-6 rounded-xl border border-white/5 hover:border-white/20 transition-colors">
-                                <div
-                                    class="hidden md:block absolute top-6 -left-[37px] w-3 h-3 rounded-full bg-white/20 border border-white/40 z-10">
-                                </div>
-                                <h3 class="text-xl font-bold text-white mb-1">Graphic Designer</h3>
-                                <p class="text-sm text-text-muted mb-4">PT. Subur Makmur Bangunan</p>
-                                <ul class="text-text-main leading-relaxed list-disc list-inside space-y-2 text-sm">
-                                    <li>Created promotional flyers, event banners, and brand visual assets.</li>
-                                    <li>Designed seasonal promotional material for corporate campaigns.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Pricing 3 -->
+                <div class="pricing-card">
+                    <div class="plan-name">Toko Online</div>
+                    <p class="plan-desc">Solusi lengkap untuk jualan online dengan sistem otomatis.</p>
 
-                    <div class="flex items-center gap-4 mb-12 mt-16">
-                        <h2 class="text-3xl font-bold text-white">Education</h2>
-                        <div class="flex-1 h-px bg-white/10"></div>
-                    </div>
-                    <div class="space-y-4">
-                        <div
-                            class="bg-background-card p-6 rounded-xl border border-white/5 flex justify-between items-center hover:border-white/20 transition-colors">
-                            <h3 class="text-lg font-bold text-white">STIENAS Colorado Samarinda</h3>
-                            <span class="text-primary font-bold">2014 - 2018</span>
-                        </div>
-                        <div
-                            class="bg-background-card p-6 rounded-xl border border-white/5 flex justify-between items-center hover:border-white/20 transition-colors">
-                            <h3 class="text-lg font-bold text-white">SMKN 6 Samarinda</h3>
-                            <span class="text-text-muted font-bold">2010 - 2013</span>
-                        </div>
-                        <div
-                            class="bg-background-card p-6 rounded-xl border border-white/5 flex justify-between items-center hover:border-white/20 transition-colors">
-                            <h3 class="text-lg font-bold text-white">SMPN 7 Samarinda</h3>
-                            <span class="text-text-muted font-bold">2007 - 2010</span>
-                        </div>
-                        <div
-                            class="bg-background-card p-6 rounded-xl border border-white/5 flex justify-between items-center hover:border-white/20 transition-colors">
-                            <h3 class="text-lg font-bold text-white">SDN 023 Samarinda</h3>
-                            <span class="text-text-muted font-bold">2001 - 2007</span>
-                        </div>
-                    </div>
+                    <ul class="features">
+                        <li><i class="ph-fill ph-check-circle"></i> Unlimited Produk</li>
+                        <li><i class="ph-fill ph-check-circle"></i> Fitur Keranjang &amp; Ongkir Otomatis</li>
+                        <li><i class="ph-fill ph-check-circle"></i> Payment Gateway</li>
+                        <li><i class="ph-fill ph-check-circle"></i> Laporan Penjualan</li>
+                        <li><i class="ph-fill ph-check-circle"></i> Training Admin Dashboard</li>
+                    </ul>
 
+                    <a href="https://wa.me/6282354506569?text=Halo%20Jefri%2C%20saya%20tertarik%20dengan%20paket%20website%20Toko%20Online."
+                        class="btn btn-outline" target="_blank" rel="noopener noreferrer">Pilih Toko Online</a>
+                </div>
+
+                <!-- Pricing 4 -->
+                <div class="pricing-card">
+                    <div class="plan-name">Custom Website</div>
+                    <p class="plan-desc">Sistem dan fitur custom khusus dengan kebutuhan skala yang lebih kompleks.</p>
+
+                    <ul class="features">
+                        <li><i class="ph-fill ph-check-circle"></i> UI/UX Custom Design</li>
+                        <li><i class="ph-fill ph-check-circle"></i> Fitur &amp; Sistem Dinamis</li>
+                        <li><i class="ph-fill ph-check-circle"></i> Optimasi Lanjutan</li>
+                        <li><i class="ph-fill ph-check-circle"></i> API Integration</li>
+                        <li><i class="ph-fill ph-check-circle"></i> Prioritas Support</li>
+                    </ul>
+
+                    <a href="https://wa.me/6282354506569?text=Halo%20Jefri%2C%20saya%20tertarik%20diskusi%20untuk%20pembuatan%20Custom%20Website."
+                        class="btn btn-outline" target="_blank" rel="noopener noreferrer">Diskusi Sekarang</a>
                 </div>
             </div>
-        </section>
-        <section class="py-32 px-6 bg-background-dark relative overflow-hidden" id="contact">
-            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div class="w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px]"></div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (AEO Optimized) -->
+    <section id="faq" class="faq">
+        <div class="container faq-container">
+            <div class="section-header">
+                <h2>Pertanyaan Umum (FAQ)</h2>
+                <p>Informasi ringkas mengenai alur kerja dan layanan dari BorneoCodeLab.</p>
             </div>
-            <div class="max-w-5xl mx-auto relative z-10 text-center">
-                <h2 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter">
-                    Ready to <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Level
-                        Up?</span>
-                </h2>
-                <p class="text-xl text-text-muted max-w-2xl mx-auto mb-12">
-                    Stop struggling with tech and start growing your business. I'm just one message away from solving
-                    your digital challenges.
-                </p>
-                <div class="flex flex-col items-center gap-6">
-                    <a class="group relative inline-flex items-center justify-center gap-3 h-20 px-12 text-xl font-bold text-background-dark bg-primary rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(0,242,255,0.4)]"
-                        href="https://wa.me/6282354506569">
-                        <span
-                            class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></span>
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z">
-                            </path>
-                        </svg>
-                        Chat on WhatsApp
-                    </a>
-                    <p class="text-sm text-text-muted mt-4">Prefer email? <a
-                            class="text-white hover:text-primary underline decoration-primary decoration-2 underline-offset-4"
-                            href="mailto:jefry.m95@gmail.com">jefry.m95@gmail.com</a></p>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Berapa lama proses pembuatan website?
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Waktu pengerjaan umumnya memakan waktu 7 hingga 14 hari kerja tergantung dari kompleksitas
+                            fitur dan kesiapan materi dari Anda.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Apa saja yang perlu saya siapkan?
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Anda hanya perlu menyiapkan profil singkat bisnis, logo, foto-foto produk/jasa, dan draft
+                            konten. Kami akan memandu Anda untuk sisanya.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Apakah ada biaya perpanjangan tahunan?
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Ya, terdapat biaya perpanjangan tahunan untuk memperpanjang
+                            masa aktif domain dan hosting (server) agar website Anda tetap online.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Apakah website bisa diedit sendiri nantinya?
+                        <i class="ph ph-caret-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Tentu saja. Kami akan memberikan dashboard admin yang user-friendly dan memberikan panduan
+                            singkat (training) tentang cara mengubah teks, gambar, atau produk.</p>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
-    <footer class="bg-black py-10 px-6 border-t border-white/10">
-        <div class="max-w-7xl mx-auto flex flex-col items-center gap-8">
-            <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary">terminal</span>
-                <span class="font-bold text-xl text-white">Jefrianus Markus</span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <a href="#" class="logo footer-logo">
+                    <img src="assets/logo_borneocodelab.png" alt="BorneoCodeLab Logo"
+                        style="height: 36px; border-radius: 6px;">
+                    BorneoCodeLab
+                </a>
+                <p>Partner digital terpercaya untuk membantu UMKM dan bisnis lokal Go Digital dengan website profesional
+                    yang terjangkau.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/jefry195" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                            class="ph ph-facebook-logo"></i></a>
+                    <a href="https://www.instagram.com/jefry195" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
+                            class="ph ph-instagram-logo"></i></a>
+                    <a href="https://www.linkedin.com/in/jefrianus-markus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
+                            class="ph ph-linkedin-logo"></i></a>
+                </div>
             </div>
-            <div class="flex flex-wrap justify-center gap-8 text-text-muted text-sm font-medium">
-                <a class="hover:text-primary transition-colors" href="#about">About</a>
-                <a class="hover:text-primary transition-colors" href="#services">Services</a>
-                <a class="hover:text-primary transition-colors" href="#portfolio">Portfolio</a>
-                <a class="hover:text-primary transition-colors" href="#experience">Resume</a>
+
+            <div class="footer-col">
+                <h3>Layanan</h3>
+                <ul>
+                    <li><a href="#layanan">Company Profile</a></li>
+                    <li><a href="#layanan">Toko Online</a></li>
+                    <li><a href="#layanan">Landing Page</a></li>
+                    <li><a href="#layanan">Web Maintenance</a></li>
+                </ul>
             </div>
-            <div class="text-center text-slate-600 text-xs mt-4">
-                <p>© 2026 Jefrianus Markus. All rights reserved.</p>
-                <p class="mt-2">Engineered with <span class="text-primary">♥</span> in Kalimantan.</p>
+
+            <div class="footer-col">
+                <h3>Hubungi Kami</h3>
+                <ul class="contact-info">
+                    <li><i class="ph-fill ph-map-pin"></i> Jl. AW. Syahranie Gg. 15 RT. 23 Kel. Air Hitam, Kota
+                        Samarinda</li>
+                    <li><i class="ph-fill ph-phone"></i> <a href="tel:+6282354506569"
+                            style="color: inherit; text-decoration: none;">082354506569</a></li>
+                    <li><i class="ph-fill ph-envelope-simple"></i> <a href="mailto:digitalmedia.agensi@gmail.com"
+                            style="color: inherit; text-decoration: none;">digitalmedia.agensi@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 BorneoCodeLab. Developed by Jefrianus Markus. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
-    <a aria-label="Chat on WhatsApp"
-        class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full whatsapp-green text-white shadow-lg transition-transform hover:-translate-y-1 hover:shadow-xl animate-pulseCustom"
-        href="https://wa.me/6282354506569" target="_blank">
-        <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z">
-            </path>
-        </svg>
-    </a>
 
-    <script>
-        // Portfolio Filter Logic
-        function filterPortfolio(category) {
-            const cards = document.querySelectorAll('.portfolio-card');
-            const btns = document.querySelectorAll('.portfolio-filter-btn');
+    <!-- Floating WA Chatbot -->
+    <div class="ai-chatbot-container wa-chatbot-container">
+        <button class="chatbot-toggle-btn" id="chatbotToggleBtn" aria-label="Chat WhatsApp">
+            <i class="ph-fill ph-whatsapp-logo"></i>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header" style="background-color: #25D366;">
+                <h3 style="display: flex; align-items: center; gap: 8px;"><i class="ph-fill ph-whatsapp-logo"
+                        style="font-size: 1.4rem;"></i> Chat WhatsApp</h3>
+                <button id="chatbotCloseBtn" aria-label="Tutup Chatbot"><i class="ph ph-x"></i></button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages" style="background-color: #e5ddd5;">
+                <div class="message ai-message" style="background-color: #fff; color: #111; position: relative;">
+                    Halo! 👋 Ada yang bisa kami bantu? Silakan sampaikan kebutuhan website Anda kepada kami.
+                    <span
+                        style="display: block; font-size: 0.7rem; color: #999; text-align: right; margin-top: 5px;">BorneoCodeLab</span>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbotInput" placeholder="Ketik pesan Anda di sini...">
+                <button id="chatbotSendBtn" aria-label="Kirim Pesan ke WA" style="background-color: #25D366;"><i
+                        class="ph-fill ph-paper-plane-right"></i></button>
+            </div>
+        </div>
+    </div>
 
-            btns.forEach(btn => {
-                if (btn.dataset.filter === category) {
-                    btn.classList.add('active-filter', 'bg-primary/10', 'text-primary', 'border-primary');
-                    btn.classList.remove('text-text-muted', 'border-white/10');
-                } else {
-                    btn.classList.remove('active-filter', 'bg-primary/10', 'text-primary', 'border-primary');
-                    btn.classList.add('text-text-muted', 'border-white/10');
-                }
-            });
-
-            cards.forEach(card => {
-                if (category === 'all' || card.dataset.category === category) {
-                    card.style.display = 'block';
-                    card.style.animation = 'fadeInUp 0.4s ease forwards';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        // Init Typed.js
-        var typed = new Typed('#typed-text', {
-            strings: ['High-Converting Websites.', 'Laravel & React Apps.', 'AI & Automation Workflows.', 'Technical SEO & GEO.'],
-            typeSpeed: 60,
-            backSpeed: 30,
-            backDelay: 2000,
-            loop: true,
-            showCursor: true,
-            cursorChar: '|'
-        });
-
-        // Init Intersection Observer for Scroll Animations
-        document.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('section');
-
-            // Apply reveal class to the direct top-level wrapper divs inside sections
-            sections.forEach(section => {
-                const innerWrappers = section.querySelectorAll('section > div');
-                innerWrappers.forEach(child => child.classList.add('reveal'));
-            });
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: "0px 0px -50px 0px"
-            });
-
-            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-        });
-
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        if (mobileMenuBtn && mobileMenu && menuIcon) {
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                if (mobileMenu.classList.contains('hidden')) {
-                    menuIcon.textContent = 'menu';
-                } else {
-                    menuIcon.textContent = 'close';
-                }
-            });
-
-            // Close menu when clicking a link
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    menuIcon.textContent = 'menu';
-                });
-            });
-        }
-    </script>
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>

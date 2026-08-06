@@ -1,0 +1,56 @@
+[
+    {
+        "id": "1",
+        "category": "COMPANY PROFILE",
+        "title": "PT. SRIWIJAYA TEKNIK UTAMA",
+        "description": "PT. Sriwijaya Teknik Utama (STU) adalah perusahaan fabrikasi, perbaikan, dan engineering terkemuka yang berbasis di Samarinda, Kalimantan Timur. Didirikan untuk mendukung industri pertambangan dan alat berat, STU spesialis dalam layanan mesin, fabrikasi baja, rotating equipment, serta hydraulic hose.",
+        "tags": "WordPress, WooCommerce",
+        "image": "assets/portfolios/1772984600_STU.png",
+        "portfolio_link": "https://www.pt-stu.co.id/"
+    },
+    {
+        "id": "2",
+        "category": "TOKO ONLINE",
+        "title": "DOOREN'Z PERCETAKAN",
+        "description": "Doorenz Percetakan Samarinda adalah perusahaan yang bergerak di bidang jasa percetakan dengan pengalaman lebih dari satu dekade.",
+        "tags": "Wordpress, WooCoomerce",
+        "image": "assets/portfolios/1772984769_dooren.png",
+        "portfolio_link": "https://doorenzcreative.com/"
+    },
+    {
+        "id": "3",
+        "category": "LANDING PAGE",
+        "title": "DIGITAL RESUME",
+        "description": "I specialize in Web Development and Digital Marketing, creating innovative and responsive digital solutions to enhance brand awareness and conversions.",
+        "tags": "React, Tailwind",
+        "image": "assets/portfolios/1772984927_jef.png",
+        "portfolio_link": "https://jefri-orcin.vercel.app/"
+    },
+    {
+        "id": "69ad9b31e2937",
+        "category": "SISTEM INFORMASI",
+        "title": "ERP",
+        "description": "ERP (Enterprise Resource Planning) adalah sistem perangkat lunak terintegrasi yang digunakan perusahaan untuk mengelola dan mengotomatisasi proses bisnis inti—seperti keuangan, SDM, manufaktur, rantai pasok, dan penjualan—dalam satu basis data sentral. ERP meningkatkan efisiensi dan visibilitas data real-time untuk pengambilan keputusan yang lebih baik.",
+        "tags": "PHP, CSS, MySql",
+        "image": "assets/portfolios/1772985137_erp.png",
+        "portfolio_link": "https://demo.lovira.biz.id/"
+    },
+    {
+        "id": "69e61b57bc000",
+        "category": "CUSTOM",
+        "title": "JeffSender",
+        "description": "Whatsapp Automation",
+        "tags": "Whatsapp Bulk Sender",
+        "image": "assets/portfolios/1776687959_wasender.png",
+        "portfolio_link": "https://wa.doorenzcreative.com/"
+    },
+    {
+        "id": "6a2812c155481",
+        "category": "CUSTOM",
+        "title": "Digital Invitation",
+        "description": "Jasa Undangan Digital",
+        "tags": "Wordpress, Digital Invitation",
+        "image": "assets/portfolios/1781011137_undangan.png",
+        "portfolio_link": "https://lovira.biz.id/"
+    }
+]
