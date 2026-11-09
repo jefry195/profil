@@ -31,11 +31,12 @@
   ];
   const BLUE = "#0D99FF";
   const RED = "#F24822";
-  const RULER = 20;
-  const MIN_AGENTS = 8;
-  const MAX_AGENTS = 48;
-  const FLOCK_AGENTS = 36;
-  const INTRO_AGENTS = 18;
+  const isMobile = typeof window !== "undefined" && (window.innerWidth < 768 || (typeof navigator !== "undefined" && navigator.maxTouchPoints > 0));
+  const RULER = isMobile ? 0 : 20;
+  const MIN_AGENTS = isMobile ? 4 : 8;
+  const MAX_AGENTS = isMobile ? 12 : 36;
+  const FLOCK_AGENTS = isMobile ? 10 : 24;
+  const INTRO_AGENTS = isMobile ? 6 : 14;
   const MAX_ITEMS = 4000;
   const MAX_WORLD_H = 40000;
   const SVGNS = "http://www.w3.org/2000/svg";
@@ -1522,26 +1523,7 @@
 .intro.gone{opacity:0;transform:translate(-50%,-50%) scale(.9)}
 .intro img{display:block;width:60px;height:60px;object-fit:contain;filter:grayscale(1);opacity:.42;border-radius:14px}
 .intro .mono{width:60px;height:60px;border-radius:16px;background:#D7DADE;color:#fff;font:700 30px/60px Inter,system-ui,sans-serif;text-align:center}
-.hud{position:absolute;left:50%;bottom:20px;transform:translate(-50%,18px);opacity:0;display:flex;align-items:center;gap:10px;padding:6px 6px 6px 10px;background:rgba(30,30,30,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);color:#fff;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.28),inset 0 0 0 1px rgba(255,255,255,.07);font:500 12px/1 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;pointer-events:auto;transition:opacity .45s ease,transform .45s cubic-bezier(.2,.8,.2,1);white-space:nowrap;user-select:none;z-index:5}
-.hud.on{opacity:1;transform:translate(-50%,0)}
-.hud .dots{display:flex;padding-left:5px}
-.hud .dots i{display:block;width:18px;height:18px;margin-left:-5px;border-radius:50%;border:2px solid #1e1e1e;font:700 9px/14px Inter,system-ui,sans-serif;font-style:normal;text-align:center;color:#fff;transition:background .3s}
-.hud .txt,.hud .status{display:flex;align-items:center;gap:7px;color:#cfcfcf;font-variant-numeric:tabular-nums}
-.hud .txt b{color:#fff;font-weight:600}
-.hud .sep{width:1px;height:12px;background:#444}
-.hud .bar{width:64px;height:3px;border-radius:2px;background:#3a3a3a;overflow:hidden}
-.hud .bar i{display:block;height:100%;width:0;background:#0D99FF;transition:width .35s ease}
-.hud button{all:unset;cursor:pointer;padding:7px 10px;border-radius:8px;background:#2c2c2c;color:#fff;font:500 12px/1 Inter,system-ui,-apple-system,sans-serif;transition:background .15s}
-.hud button:hover{background:#3a3a3a}
-.hud button.pri{background:#0D99FF}
-.hud button.pri:hover{background:#2aa6ff}
-.hud button.on{background:rgba(13,153,255,.22);color:#8fd0ff}
-.hud button[hidden]{display:none}
-.hud .x{padding:7px 9px;color:#aaa}
-.hud button.snd{display:flex;align-items:center;gap:6px;padding:6px 8px}
-.hud button.snd.off{color:#8a8a8a}
-.hud button.snd.tap{background:#0D99FF;animation:hudpulse 1.6s ease-in-out infinite}
-@keyframes hudpulse{50%{box-shadow:0 0 0 4px rgba(13,153,255,.28)}}
+.hud{display:none!important}
 `;
 
   // -------------------------------------------------------------------- env
@@ -1622,7 +1604,7 @@
       for (const old of document.querySelectorAll("swarm-rebuild")) old.remove();
       const host = document.createElement("swarm-rebuild");
       host.style.cssText =
-        "all:initial !important;position:fixed !important;inset:0 !important;z-index:2147483647 !important;display:block !important;pointer-events:auto !important;contain:strict !important;opacity:1;transition:opacity .6s ease;";
+        "all:initial !important;position:fixed !important;inset:0 !important;z-index:2147483647 !important;display:block !important;pointer-events:none !important;contain:strict !important;opacity:1;transition:opacity .6s ease;";
       env.host = host;
       this.host = host;
       const root = host.attachShadow({ mode: "open" });
@@ -2020,7 +2002,7 @@
 
     renderRulers(E) {
       const t = E.rulers.t;
-      if (t <= 0.001) {
+      if (isMobile || t <= 0.001) {
         if (this._rulersOn) {
           this.rulers.innerHTML = "";
           this._rulersOn = false;
@@ -2303,6 +2285,9 @@
       this.vel = Math.max(this.vel * Math.exp(-dt * 1.2), this.vel * 0.7 + sv * 0.3);
       if (this.started) this.frontier = Math.max(this.frontier, this.viewBot);
       const avail = this.started ? this.available() : [];
+      if (this.started && avail.length === 0 && this.waitCount > 0) {
+        this.frontier += dt * 1500;
+      }
       this.tempo = clamp(2.1 + this.vel / 900 + (avail.length / Math.max(1, this.cursors.length)) * 0.5, 2.1, 4.5) * this.speed;
 
       if (this.rulers.want > 0) this.rulers.lastNeed = this.time;
@@ -3542,7 +3527,9 @@
       const wait = 1500 - (performance.now() - this.t0);
       if (wait > 0) await sleep(wait);
       if (this.dead) return;
+      this.engine.speed = isMobile ? 2.2 : 1.8;
       this.engine.start();
+      this.tour = true;
     }
 
     async scan() {
@@ -3595,6 +3582,21 @@
       }, true);
       // browsers only let audio start after a click/keypress on the page
       on(window, "pointerdown", () => this.unlockSound(), true);
+      on(window, "touchstart", (e) => {
+        this.unlockSound();
+        if (e.touches && e.touches.length > 0) {
+          this.engine.mouse = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+        }
+        if (this.engine.ready) this.engine.start();
+      }, { passive: true });
+      on(window, "touchmove", (e) => {
+        if (e.touches && e.touches.length > 0) {
+          this.engine.mouse = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+        }
+      }, { passive: true });
+      on(window, "click", () => {
+        if (!this.dead && this.engine && this.engine.started) stop(true);
+      }, true);
       if (!this.env.isRoot) {
         on(this.view.host, "wheel", (e) => {
           e.preventDefault();
@@ -3676,8 +3678,8 @@
       }
       const crew = Math.max(MIN_AGENTS, E.cursors.filter((c) => !c.leaving).length);
       const backlog = E.backlog();
-      const target = backlog <= Math.max(4, crew * 0.6) ? 230 : backlog <= crew * 1.5 ? 80 : 0;
-      this.tourV += (target - this.tourV) * Math.min(1, dt * 2.5);
+      const target = backlog <= Math.max(4, crew * 0.6) ? 360 : backlog <= crew * 1.5 ? 180 : 80;
+      this.tourV += (target - this.tourV) * Math.min(1, dt * 3.0);
       this.tourAcc += this.tourV * dt;
       if (this.tourAcc >= 1) {
         const d = Math.floor(this.tourAcc);
@@ -3694,38 +3696,16 @@
       const total = E.tasks.length;
       const done = E.doneCount;
       if (this.complete) return;
-      if (!E.started) v.status.innerHTML = `<b>${E.cursors.length}</b> agents ready<span class="sep"></span>${total.toLocaleString()} layers`;
-      else {
-        const pend = E.tasks.length - done;
-        const below = E.tasks.some((t) => t.state === "wait" && t.layer === "world" && t.gate > E.frontier);
-        v.status.innerHTML =
-          `<b>${workers}</b> agents<span class="sep"></span><b>${done.toLocaleString()}</b> / ${total.toLocaleString()} layers` +
-          (below && pend && !this.tour && E.backlog() === 0 ? `<span class="sep"></span>scroll to keep building` : "");
-      }
-      v.barFill.style.width = total ? `${(done / total) * 100}%` : "0%";
-      const busy = E.cursors.filter((c) => c.task).slice(-5);
-      const key = busy.map((c) => c.id).join(",");
-      if (key !== this._dots) {
-        this._dots = key;
-        v.dots.innerHTML = busy.map((c) => `<i style="background:${c.color}" title="${c.name}">${c.name[0]}</i>`).join("");
-      }
     }
 
     onComplete() {
       this.complete = true;
       if (this.sfx) this.sfx.finale();
-      const E = this.engine;
-      const v = this.view;
-      const workers = E.cursors.filter((c) => c.worked).length + E.retired;
-      const secs = (E.endTime - E.startTime).toFixed(1);
-      v.status.innerHTML = `Rebuilt by <b>${workers}</b> agents in <b>${secs}s</b>`;
-      v.barFill.style.width = "100%";
-      v.dots.innerHTML = "";
-      v.root.querySelector('[data-a="live"]').hidden = false;
-      v.root.querySelector('[data-a="replay"]').hidden = false;
-      v.root.querySelector('[data-a="tour"]').hidden = true;
-      v.root.querySelector('[data-a="speed"]').hidden = true;
       this.tour = false;
+      // Otomatis langsung Go Live begitu selesai agar bersih tanpa sisa overlay
+      setTimeout(() => {
+        if (!this.dead) stop(true);
+      }, 350);
     }
 
     destroy(reveal) {
