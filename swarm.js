@@ -3810,6 +3810,7 @@
   let lastShot = null;
 
   function start() {
+    if (isMobile) return;
     if (app) return;
     app = new App();
     app.run().catch((err) => console.error("[swarm-rebuild]", err));
@@ -3864,6 +3865,7 @@
 
   // Auto-start handling: wait for page and styles to fully load
   function checkAutoStart() {
+    if (isMobile) return;
     if (typeof history !== "undefined" && "scrollRestoration" in history) {
       history.scrollRestoration = "manual";
     }
