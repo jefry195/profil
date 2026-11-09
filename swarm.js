@@ -2276,6 +2276,20 @@
       return n;
     }
 
+    // work unfinished in the current viewport (to allow section-by-section building)
+    viewportBacklog() {
+      let n = 0;
+      const top = this.viewTop - 30;
+      const bot = this.viewBot + 30;
+      for (const t of this.tasks) {
+        if (t.state !== "done") {
+          const y = this.taskY(t);
+          if (y >= top && y <= bot) n++;
+        }
+      }
+      return n;
+    }
+
     step(dt) {
       dt = Math.min(dt, 0.05);
       this.time += dt;
@@ -2285,9 +2299,6 @@
       this.vel = Math.max(this.vel * Math.exp(-dt * 1.2), this.vel * 0.7 + sv * 0.3);
       if (this.started) this.frontier = Math.max(this.frontier, this.viewBot);
       const avail = this.started ? this.available() : [];
-      if (this.started && avail.length === 0 && this.waitCount > 0) {
-        this.frontier += dt * 1500;
-      }
       this.tempo = clamp(2.1 + this.vel / 900 + (avail.length / Math.max(1, this.cursors.length)) * 0.5, 2.1, 4.5) * this.speed;
 
       if (this.rulers.want > 0) this.rulers.lastNeed = this.time;
@@ -2307,7 +2318,8 @@
         }
       }
 
-      if (!this.flocking && this.started && this.waitCount === 0) {
+      const isAtBottom = this.view && this.view.env ? vp.sy >= (this.view.env.scrollHeight() - vp.vh - 35) : true;
+      if (!this.flocking && this.started && this.waitCount === 0 && isAtBottom) {
         for (const c of this.cursors)
           if (!c.task && !c.follow) {
             c.follow = true;
@@ -3451,6 +3463,7 @@
       this.tour = false;
       this.tourV = 0;
       this.tourAcc = 0;
+      this.sectionHold = 0;
       this.speeds = [1, 2, 3];
       this.speedIx = 0;
       this.complete = false;
@@ -3672,14 +3685,30 @@
       if (!E.started) return;
       const g = this.env.geom();
       const maxY = this.env.scrollHeight() - g.vh;
-      if (g.sy >= maxY - 1) {
+      if (g.sy >= maxY - 4) {
         this.tourV = 0;
+        E.frontier = Math.max(E.frontier, this.env.scrollHeight());
+        if (E.waitCount === 0 || E.backlog() === 0) {
+          if (!this.complete) this.onComplete();
+        }
         return;
       }
-      const crew = Math.max(MIN_AGENTS, E.cursors.filter((c) => !c.leaving).length);
-      const backlog = E.backlog();
-      const target = backlog <= Math.max(4, crew * 0.6) ? 360 : backlog <= crew * 1.5 ? 180 : 80;
-      this.tourV += (target - this.tourV) * Math.min(1, dt * 3.0);
+
+      // Per-section building: wait for current viewport to finish before scrolling
+      const vpBacklog = E.viewportBacklog();
+      if (vpBacklog > 0) {
+        this.tourV = Math.max(0, this.tourV - dt * 900);
+        this.sectionHold = 0.5;
+      } else {
+        if (this.sectionHold > 0) {
+          this.sectionHold -= dt;
+          this.tourV = 0;
+        } else {
+          const speed = isMobile ? 420 : 500;
+          this.tourV += (speed - this.tourV) * Math.min(1, dt * 4.5);
+        }
+      }
+
       this.tourAcc += this.tourV * dt;
       if (this.tourAcc >= 1) {
         const d = Math.floor(this.tourAcc);
