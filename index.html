@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Jefrianus Markus - Web Developer &amp; Digital Marketer</title>
+    <link rel="icon" type="image/png" href="jef.png" />
     <meta name="description"
         content="Portfolio of Jefrianus Markus, a Web Developer and Digital Marketer based in Kalimantan. Delivering innovative digital solutions to scale your business." />
     <meta name="keywords"
@@ -112,10 +113,18 @@
                     <a class="text-sm font-medium text-text-muted hover:text-primary transition-colors tracking-wide"
                         href="#experience">RESUME</a>
                 </nav>
-                <a class="inline-flex items-center justify-center h-10 px-6 font-bold text-sm tracking-wide text-background-dark transition-all duration-200 bg-primary rounded-lg hover:bg-white hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-background-dark"
-                    href="#contact">
-                    LET'S TALK
-                </a>
+                <div class="flex items-center gap-3">
+                    <button onclick="window.__swarmRebuild &amp;&amp; window.__swarmRebuild.start()"
+                        class="inline-flex items-center gap-1.5 h-10 px-4 font-bold text-xs tracking-wider text-primary hover:text-white border border-primary/30 hover:border-primary bg-primary/5 hover:bg-primary/20 rounded-lg transition-all duration-200 focus:outline-none shadow-[0_0_10px_rgba(0,242,255,0.1)] cursor-pointer"
+                        title="Tonton animasi Swarm Cursors (Rebuild)">
+                        <span class="material-symbols-outlined !text-[18px]">play_circle</span>
+                        <span>SWARM REBUILD</span>
+                    </button>
+                    <a class="inline-flex items-center justify-center h-10 px-6 font-bold text-sm tracking-wide text-background-dark transition-all duration-200 bg-primary rounded-lg hover:bg-white hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-background-dark"
+                        href="#contact">
+                        LET'S TALK
+                    </a>
+                </div>
             </div>
             <button id="mobile-menu-btn"
                 class="lg:hidden text-white hover:text-primary transition-colors focus:outline-none">
@@ -136,6 +145,11 @@
                     href="#portfolio">PORTFOLIO</a>
                 <a class="mobile-link text-base font-medium text-text-main hover:text-primary transition-colors tracking-wide block"
                     href="#experience">RESUME</a>
+                <button onclick="window.__swarmRebuild &amp;&amp; window.__swarmRebuild.start()"
+                    class="mobile-link flex items-center justify-center gap-2 h-12 px-6 font-bold text-sm tracking-wide text-primary border border-primary/30 bg-primary/5 rounded-lg hover:bg-primary/10 transition-all duration-200 w-full cursor-pointer">
+                    <span class="material-symbols-outlined !text-[20px]">play_circle</span>
+                    <span>SWARM REBUILD ANIMATION</span>
+                </button>
                 <a class="mobile-link inline-flex mt-2 items-center justify-center h-12 px-6 font-bold text-sm tracking-wide text-background-dark transition-all duration-200 bg-primary rounded-lg hover:bg-white w-full shadow-[0_0_15px_rgba(0,242,255,0.3)]"
                     href="#contact">
                     LET'S TALK
@@ -179,6 +193,12 @@
                             href="#services">
                             Explore Services
                         </a>
+                        <button onclick="window.__swarmRebuild &amp;&amp; window.__swarmRebuild.start()"
+                            class="inline-flex items-center justify-center h-14 px-6 font-bold text-base text-primary transition-all duration-200 bg-primary/10 border border-primary/30 rounded-lg hover:bg-primary/20 hover:scale-105 shadow-[0_0_15px_rgba(0,242,255,0.15)] group cursor-pointer"
+                            title="Tonton animasi Swarm Cursors (Rebuild)">
+                            <span class="material-symbols-outlined mr-2 text-xl group-hover:rotate-12 transition-transform">animation</span>
+                            Swarm Rebuild
+                        </button>
                     </div>
                     <div class="flex items-center gap-8 mt-8 pt-8 border-t border-white/10">
                         <div>
@@ -1069,6 +1089,12 @@
             });
         }
     </script>
+    <!-- Swarm Cursors Rebuild Animation (https://github.com/DhvanilPatel/swarm-cursors) -->
+    <!-- To only trigger via button or Alt+Shift+S / 'S', uncomment: window.__swarmAutoStart = false; -->
+    <script>
+        // window.__swarmAutoStart = false;
+    </script>
+    <script src="swarm.js"></script>
 </body>
 
 </html>
