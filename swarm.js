@@ -3488,7 +3488,16 @@
     }
 
     async run() {
+      if (typeof history !== "undefined" && "scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+      if (typeof window !== "undefined") {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }
       this.env = detectEnv();
+      if (this.env && this.env.scrollTo) this.env.scrollTo(0, 0);
       const shotP = this.loadShot();
       this.view = new View(this.env);
       this.engine = new Engine(this.view);
@@ -3557,10 +3566,13 @@
         await nextFrame();
         await sleep(30);
       }
-      env.scrollTo(g.sy, g.sx);
+      // Always reset cleanly to the very top (0, 0)
+      env.scrollTo(0, 0);
+      window.scrollTo(0, 0);
       await nextFrame();
-      await sleep(750);
-      env.scrollTo(g.sy, g.sx);
+      await sleep(350);
+      env.scrollTo(0, 0);
+      window.scrollTo(0, 0);
       this.view.frozen = null;
     }
 
@@ -3607,7 +3619,7 @@
           this.engine.mouse = { x: e.touches[0].clientX, y: e.touches[0].clientY };
         }
       }, { passive: true });
-      on(window, "click", () => {
+      on(window, "dblclick", () => {
         if (!this.dead && this.engine && this.engine.started) stop(true);
       }, true);
       if (!this.env.isRoot) {
@@ -3685,30 +3697,34 @@
       if (!E.started) return;
       const g = this.env.geom();
       const maxY = this.env.scrollHeight() - g.vh;
-      if (g.sy >= maxY - 4) {
+      if (maxY <= 0) return;
+
+      if (g.sy >= maxY - 6) {
         this.tourV = 0;
-        E.frontier = Math.max(E.frontier, this.env.scrollHeight());
+        E.frontier = Infinity;
+        if (!this._bottomTimer) {
+          this._bottomTimer = setTimeout(() => {
+            if (!this.complete) this.onComplete();
+          }, 800);
+        }
         if (E.waitCount === 0 || E.backlog() === 0) {
           if (!this.complete) this.onComplete();
         }
         return;
       }
 
-      // Per-section building: wait for current viewport to finish before scrolling
+      // Section-aware pacing: slow cruise when building active, swift glide between sections
       const vpBacklog = E.viewportBacklog();
-      if (vpBacklog > 0) {
-        this.tourV = Math.max(0, this.tourV - dt * 900);
-        this.sectionHold = 0.5;
+      let targetSpeed;
+      if (vpBacklog > 5) {
+        targetSpeed = isMobile ? 80 : 110;
+      } else if (vpBacklog > 0) {
+        targetSpeed = isMobile ? 150 : 200;
       } else {
-        if (this.sectionHold > 0) {
-          this.sectionHold -= dt;
-          this.tourV = 0;
-        } else {
-          const speed = isMobile ? 420 : 500;
-          this.tourV += (speed - this.tourV) * Math.min(1, dt * 4.5);
-        }
+        targetSpeed = isMobile ? 420 : 520;
       }
 
+      this.tourV += (targetSpeed - this.tourV) * Math.min(1, dt * 3.5);
       this.tourAcc += this.tourV * dt;
       if (this.tourAcc >= 1) {
         const d = Math.floor(this.tourAcc);
@@ -3846,8 +3862,17 @@
 
   // Auto-start handling: wait for page and styles to fully load
   function checkAutoStart() {
+    if (typeof history !== "undefined" && "scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+    if (typeof window !== "undefined") {
+      window.scrollTo(0, 0);
+    }
     if (window.__swarmAutoStart === false) return;
-    const run = () => setTimeout(start, 350);
+    const run = () => {
+      window.scrollTo(0, 0);
+      setTimeout(start, 350);
+    };
     if (document.readyState === "complete") {
       run();
     } else {
