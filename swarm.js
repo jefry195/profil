@@ -3551,30 +3551,12 @@
       if (this.dead) return;
       this.engine.speed = isMobile ? 2.2 : 1.8;
       this.engine.start();
-      this.tour = !isMobile;
+      this.tour = true;
     }
 
     async scan() {
-      if (isMobile) return;
-      const env = this.env;
-      const g = env.geom();
-      const H = env.scrollHeight();
-      if (H <= g.vh * 1.25) return;
-      this.view.frozen = { ...this.view.vp };
-      const steps = Math.min(28, Math.ceil(H / (g.vh * 0.85)));
-      for (let i = 1; i <= steps && !this.dead; i++) {
-        env.scrollTo(Math.min(H, (H / steps) * i));
-        await nextFrame();
-        await sleep(30);
-      }
-      // Always reset cleanly to the very top (0, 0)
-      env.scrollTo(0, 0);
-      window.scrollTo(0, 0);
-      await nextFrame();
-      await sleep(350);
-      env.scrollTo(0, 0);
-      window.scrollTo(0, 0);
-      this.view.frozen = null;
+      // Keep viewport stationary at top; DOM elements are fully accessible without scrolling
+      return;
     }
 
     bind() {
@@ -3765,7 +3747,6 @@
         cancelAnimationFrame(this.raf);
         for (const u of this.unbinds || []) u();
         this.view.host.remove();
-        if (isMobile) window.scrollTo(0, 0);
       };
       if (reveal) {
         this.engine.releasing = true;
@@ -3810,7 +3791,6 @@
   let lastShot = null;
 
   function start() {
-    if (isMobile) return;
     if (app) return;
     app = new App();
     app.run().catch((err) => console.error("[swarm-rebuild]", err));
@@ -3865,7 +3845,6 @@
 
   // Auto-start handling: wait for page and styles to fully load
   function checkAutoStart() {
-    if (isMobile) return;
     if (typeof history !== "undefined" && "scrollRestoration" in history) {
       history.scrollRestoration = "manual";
     }
@@ -3875,12 +3854,12 @@
     if (window.__swarmAutoStart === false) return;
     const run = () => {
       window.scrollTo(0, 0);
-      setTimeout(start, 350);
+      setTimeout(start, 200);
     };
-    if (document.readyState === "complete") {
-      run();
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", run, { once: true });
     } else {
-      window.addEventListener("load", run, { once: true });
+      run();
     }
   }
 
