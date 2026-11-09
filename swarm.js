@@ -3551,10 +3551,11 @@
       if (this.dead) return;
       this.engine.speed = isMobile ? 2.2 : 1.8;
       this.engine.start();
-      this.tour = true;
+      this.tour = !isMobile;
     }
 
     async scan() {
+      if (isMobile) return;
       const env = this.env;
       const g = env.geom();
       const H = env.scrollHeight();
@@ -3764,6 +3765,7 @@
         cancelAnimationFrame(this.raf);
         for (const u of this.unbinds || []) u();
         this.view.host.remove();
+        if (isMobile) window.scrollTo(0, 0);
       };
       if (reveal) {
         this.engine.releasing = true;
