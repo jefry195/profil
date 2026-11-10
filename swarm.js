@@ -1333,20 +1333,22 @@
         if (!byX.has(x)) byX.set(x, []);
         byX.get(x).push(it);
       }
-      let best = null;
-      for (const [x, l] of byX) if (l.length >= 3 && (!best || l.length > best[1].length)) best = [x, l];
-      if (best) {
-        const top = Math.min(...best[1].map((m) => m.tb.y));
-        const members = best[1].filter((m) => m.tb.y < top + 450).sort((a, b) => b.fs - a.fs).slice(0, 2);
-        const g = { axis: "x", pos: best[0], cur: best[0], op: 1, flash: 0, dragging: false, vis: false };
-        guides.push(g);
-        const gy = Math.min(...members.map((m) => m.tb.y)) - 30;
-        g.task = mk(gy, { type: "guide", g }, [], "world");
-        g.deps = [];
-        for (const m of members) {
-          m.task.spec.snap = g;
-          m.task.spec.snapDx = m.tb.x - best[0];
-          g.deps.push(m.task);
+      if (!isMobile) {
+        let best = null;
+        for (const [x, l] of byX) if (l.length >= 3 && (!best || l.length > best[1].length)) best = [x, l];
+        if (best) {
+          const top = Math.min(...best[1].map((m) => m.tb.y));
+          const members = best[1].filter((m) => m.tb.y < top + 450).sort((a, b) => b.fs - a.fs).slice(0, 2);
+          const g = { axis: "x", pos: best[0], cur: best[0], op: 1, flash: 0, dragging: false, vis: false };
+          guides.push(g);
+          const gy = Math.min(...members.map((m) => m.tb.y)) - 30;
+          g.task = mk(gy, { type: "guide", g }, [], "world");
+          g.deps = [];
+          for (const m of members) {
+            m.task.spec.snap = g;
+            m.task.spec.snapDx = m.tb.x - best[0];
+            g.deps.push(m.task);
+          }
         }
       }
       const byY = new Map();
@@ -1945,6 +1947,7 @@
         const sw = 1 + g.flash;
         const flt = g.flash > 0 ? ` style="filter:drop-shadow(0 0 ${f1(2 + g.flash * 3)}px ${RED})"` : "";
         if (g.axis === "x") {
+          if (isMobile) continue;
           const x = X(g.cur);
           s += `<line x1="${x}" x2="${x}" y1="0" y2="${H}" stroke="${RED}" stroke-width="${sw}" opacity="${f1(g.op)}"${flt}/>`;
         } else {
@@ -2046,6 +2049,7 @@
       for (const g of E.guides) {
         if (!g.dragging) continue;
         if (g.axis === "x") {
+          if (isMobile) continue;
           const x = f1(g.cur - vp.sx + vp.ox);
           u += `<line x1="${x}" x2="${x}" y1="0" y2="${RULER}" stroke="${RED}"/><text x="${f1(x + 4)}" y="11" class="rtext" fill="${RED}" style="fill:${RED}">${Math.round(g.cur)}</text>`;
         } else {
@@ -3730,14 +3734,56 @@
       if (this.complete) return;
     }
 
-    onComplete() {
+    async scrollToTop(durationMs = 850) {
+      const env = this.env;
+      const g = env.geom();
+      const startY = g.sy;
+      if (startY <= 10) return;
+      const startTime = performance.now();
+      return new Promise((resolve) => {
+        const step = (now) => {
+          if (this.dead) return resolve();
+          const elapsed = now - startTime;
+          const p = Math.min(1, elapsed / durationMs);
+          // easeInOutCubic: gentle departure, swift glide, gentle landing at top
+          const ease = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
+          const targetY = Math.round(startY * (1 - ease));
+          env.scrollTo(targetY);
+          if (this.view && !this.view.frozen) {
+            this.view.syncWorld();
+          }
+          if (p < 1) {
+            requestAnimationFrame(step);
+          } else {
+            env.scrollTo(0);
+            if (typeof window !== "undefined") window.scrollTo(0, 0);
+            if (this.view) this.view.syncWorld();
+            resolve();
+          }
+        };
+        requestAnimationFrame(step);
+      });
+    }
+
+    async onComplete() {
+      if (this._completed) return;
+      this._completed = true;
       this.complete = true;
-      if (this.sfx) this.sfx.finale();
       this.tour = false;
-      // Otomatis langsung Go Live begitu selesai agar bersih tanpa sisa overlay
-      setTimeout(() => {
-        if (!this.dead) stop(true);
-      }, 350);
+      if (this.sfx) this.sfx.finale();
+      this.engine.releasing = true;
+      this.engine.flocking = true;
+      for (const c of this.engine.cursors) {
+        c.gen = null;
+        c.follow = false;
+      }
+      // Brief pause at the bottom to admire the completed page
+      await sleep(400);
+      // Fast, stylish smooth scroll transition back to top
+      await this.scrollToTop(isMobile ? 750 : 850);
+      await sleep(150);
+      // Cleanly Go Live right at the top
+      if (!this.dead) stop(true);
     }
 
     destroy(reveal) {
