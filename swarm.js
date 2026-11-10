@@ -3553,7 +3553,7 @@
       const wait = 1500 - (performance.now() - this.t0);
       if (wait > 0) await sleep(wait);
       if (this.dead) return;
-      this.engine.speed = isMobile ? 3.0 : 2.4;
+      this.engine.speed = isMobile ? 1.5 : 1.35;
       this.engine.start();
       this.tour = true;
     }
@@ -3704,11 +3704,11 @@
       const vpBacklog = E.viewportBacklog();
       let targetSpeed;
       if (vpBacklog > 5) {
-        targetSpeed = isMobile ? 180 : 250;
+        targetSpeed = isMobile ? 75 : 95;
       } else if (vpBacklog > 0) {
-        targetSpeed = isMobile ? 320 : 440;
+        targetSpeed = isMobile ? 135 : 175;
       } else {
-        targetSpeed = isMobile ? 600 : 800;
+        targetSpeed = isMobile ? 340 : 440;
       }
 
       this.tourV += (targetSpeed - this.tourV) * Math.min(1, dt * 3.5);
