@@ -1040,7 +1040,8 @@
         flushRun();
         return;
       }
-      const op = ctx.op * parseFloat(cs.opacity);
+      const rawOp = el.classList?.contains("reveal") ? 1 : parseFloat(cs.opacity);
+      const op = ctx.op * (isNaN(rawOp) ? 1 : rawOp);
       if (!(op > 0.03)) return;
       const r = el.getBoundingClientRect();
       // "visually hidden" accessibility text: 1px boxes, clip:rect(0 0 0 0), clip-path:inset(50%)
@@ -3533,6 +3534,9 @@
         const g = this.env.geom();
         shot.valid = Math.abs(g.sx - shot.sx) < 1 && Math.abs(g.sy - shot.sy) < 1;
       }
+      try {
+        document.querySelectorAll(".reveal").forEach((el) => el.classList.add("active"));
+      } catch (_) {}
       let model;
       try {
         model = captureModel(this.env, shot);
@@ -3549,7 +3553,7 @@
       const wait = 1500 - (performance.now() - this.t0);
       if (wait > 0) await sleep(wait);
       if (this.dead) return;
-      this.engine.speed = isMobile ? 2.2 : 1.8;
+      this.engine.speed = isMobile ? 3.0 : 2.4;
       this.engine.start();
       this.tour = true;
     }
@@ -3700,11 +3704,11 @@
       const vpBacklog = E.viewportBacklog();
       let targetSpeed;
       if (vpBacklog > 5) {
-        targetSpeed = isMobile ? 80 : 110;
+        targetSpeed = isMobile ? 180 : 250;
       } else if (vpBacklog > 0) {
-        targetSpeed = isMobile ? 150 : 200;
+        targetSpeed = isMobile ? 320 : 440;
       } else {
-        targetSpeed = isMobile ? 420 : 520;
+        targetSpeed = isMobile ? 600 : 800;
       }
 
       this.tourV += (targetSpeed - this.tourV) * Math.min(1, dt * 3.5);

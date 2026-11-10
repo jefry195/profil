@@ -108,19 +108,12 @@
                 box-shadow: 0 0 15px rgba(0, 242, 255, 0.15);
             }
             .reveal {
-                opacity: 0;
-                transform: translateY(20px);
-                transition: opacity 0.6s ease, transform 0.6s ease;
+                opacity: 1;
+                transform: none;
             }
             .reveal.active {
                 opacity: 1;
-                transform: translateY(0);
-            }
-            @media (max-width: 768px) {
-                .reveal {
-                    transform: none !important;
-                    transition: opacity 0.5s ease;
-                }
+                transform: none;
             }
         }
     </style>
@@ -1461,28 +1454,9 @@
             cursorChar: '|'
         });
 
-        // Init Intersection Observer for Scroll Animations
+        // All sections are naturally visible for Swarm rebuild
         document.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('section');
-
-            // Apply reveal class to the direct top-level wrapper divs inside sections
-            sections.forEach(section => {
-                const innerWrappers = section.querySelectorAll('section > div');
-                innerWrappers.forEach(child => child.classList.add('reveal'));
-            });
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: "0px 0px -50px 0px"
-            });
-
-            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+            document.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
         });
 
         // Mobile Menu Toggle
